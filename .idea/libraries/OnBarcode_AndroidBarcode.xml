@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="OnBarcode.AndroidBarcode">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/loltrack/build/exploded-bundles/ComAfollestadSilkLibrary10SNAPSHOT.aar/libs/OnBarcode.AndroidBarcode.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,11 +1,17 @@
 apply plugin: 'android'
 
+repositories {
+	maven {
+		url "C://Users/Dylan/.m2/repository"
+	}
+}
+
 android {
     compileSdkVersion 19
     buildToolsVersion "19.0.0"
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"
@@ -19,4 +25,6 @@ android {
 }
 
 dependencies {
+    compile 'com.afollestad.silk:library:1.0-SNAPSHOT'
+    compile 'com.afollestad.cardsui:library:1.0-SNAPSHOT'
 }

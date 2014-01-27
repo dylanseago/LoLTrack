@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ComAfollestadSilkLibrary10SNAPSHOT.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/loltrack/build/exploded-bundles/ComAfollestadSilkLibrary10SNAPSHOT.aar/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/loltrack/build/exploded-bundles/ComAfollestadSilkLibrary10SNAPSHOT.aar/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
