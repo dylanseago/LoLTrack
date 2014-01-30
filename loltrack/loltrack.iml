@@ -71,11 +71,15 @@
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
+    <orderEntry type="library" exported="" name="ComAfollestadCardsuiLibrary10SNAPSHOT.aar" level="project" />
     <orderEntry type="library" exported="" name="kryo-2.21-all" level="project" />
     <orderEntry type="library" exported="" name="ComAfollestadSilkLibrary10SNAPSHOT.aar" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="httpclientandroidlib-1.1.2" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.2-javadoc" level="project" />
     <orderEntry type="library" exported="" name="OnBarcode.AndroidBarcode" level="project" />
     <orderEntry type="library" exported="" name="support-v13-18.0.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.2-sources" level="project" />
   </component>
 </module>
 

@@ -1,8 +1,128 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light">
-        <!-- Customize your theme here. -->
+    <style name="CardText">
+        <item name="android:textSize">@dimen/card_small_text</item>
+        <item name="android:textColor">@color/DarkGrey</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="CardRegion">
+        <item name="android:textSize">@dimen/card_xs_text</item>
+        <item name="android:textColor">@color/LightGrey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardStat">
+        <item name="android:textSize">@dimen/card_xs_text</item>
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CardStat2">
+        <item name="android:textSize">@dimen/card_xxs_text</item>
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CardStat3">
+        <item name="android:textSize">@dimen/card_xxxs_text</item>
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="CardStat4">
+        <item name="android:textSize">9.0sp</item>
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:textSize">@dimen/card_xl_text</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="CardSubtitle" parent="@style/CardText">
+        <item name="android:textSize">@dimen/card_medium_text</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="CardHeader" parent="@style/CardText">
+        <item name="android:textSize">@dimen/card_medium_text</item>
+        <item name="android:textColor">@color/DarkestGrey</item>
+    </style>
+
+    <style name="CardHeader2" parent="@style/CardText">
+        <item name="android:textSize">@dimen/card_small_text</item>
+        <item name="android:textColor">@color/DarkestGrey</item>
+    </style>
+
+    <style name="CardHeader3" parent="@style/CardText">
+        <item name="android:textSize">@dimen/card_xs_text</item>
+        <item name="android:textColor">@color/DarkestGrey</item>
+    </style>
+    
+    <style name="CardHeader4" parent="@style/CardText">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">@color/DarkestGrey</item>
+    </style>
+
+    <style name="bannerSubtitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="ComingSoonHeader">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="ComingSoonEntry">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+    </style>
+
+    <style name="LabelTiny">
+        <item name="android:textSize">8.0sp</item>
+        <item name="android:textColor">@color/Grey</item>
+    </style>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
 </resources>
