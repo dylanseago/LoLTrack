@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.seago.loltrack.fonts.RobotoLightTextView
+        android:id="@+id/queue"
+        style="@style/CardHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Queue"
+        android:textIsSelectable="false" />
+
+    <ImageView
+        android:id="@+id/crest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/queue"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/contentDescription_topRankingImage"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/crest_unranked" />
+
+    <com.seago.loltrack.fonts.RobotoLightTextView
+        android:id="@+id/league"
+        style="@style/CardHeader3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crest"
+        android:gravity="center"
+        android:text="Unranked"
+        android:textIsSelectable="false" />
+
+    <!-- League points -->
+
+    <TextView
+        android:id="@+id/lp"
+        style="@style/CardStat2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/league"
+        android:gravity="center"
+        android:text="0 LP"
+        android:textIsSelectable="false" />
+
+    <!-- Win/Loss -->
+
+    <RelativeLayout
+        android:id="@+id/winsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lp"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/winsLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/winsLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/wins"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/winsLabel"
+            android:text="0"
+            android:textColor="@color/statGreen"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/lossesLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/wins"
+            android:text="@string/lossesLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/losses"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lossesLabel"
+            android:text="0"
+            android:textColor="@color/statRed"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <!-- KDA -->
+
+    <RelativeLayout
+        android:id="@+id/KDALayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/winsLayout"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/KDALabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/kdaLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/KDA"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/KDALabel"
+            android:text="0"
+            android:textColor="@color/statBlue"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <!-- Time played -->
+
+    <RelativeLayout
+        android:id="@+id/lastPlayedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/KDALayout"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/lastPlayedLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/lastPlayedLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/lastPlayed"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastPlayedLabel"
+            android:layout_centerHorizontal="true"
+            android:text="Never"
+            android:textColor="@color/statBlue"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

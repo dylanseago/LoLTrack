@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/championRow"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="60" >
+
+        <ImageView
+            android:id="@+id/championIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/champion_icon2"
+            android:contentDescription="@string/contentDescription_topRankingImage"
+            android:maxHeight="24dp"
+            android:maxWidth="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/champion_icon_unknown" />
+
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/championName"
+            style="@style/CardHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/championIcon"
+            android:paddingLeft="8dp"
+            android:text="ChampionName"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <com.seago.loltrack.fonts.RobotoTextView
+        android:id="@+id/winPercent"
+        style="@style/CardStat2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:text="0%"
+        android:textColor="@color/statGreen"
+        android:textIsSelectable="false" />
+
+    <com.seago.loltrack.fonts.RobotoTextView
+        android:id="@+id/games"
+        style="@style/CardStat2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/statBlue"
+        android:textIsSelectable="false" />
+
+</TableRow>

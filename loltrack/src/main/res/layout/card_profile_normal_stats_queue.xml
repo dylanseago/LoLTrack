@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.seago.loltrack.fonts.RobotoLightTextView
+        android:id="@+id/map"
+        style="@style/CardHeader2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Map"
+        android:textIsSelectable="false" />
+
+    <ImageView
+        android:id="@+id/crest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/contentDescription_topRankingImage"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/crest_unranked" />
+
+    <!-- Wins -->
+
+    <RelativeLayout
+        android:id="@+id/winsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crest"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/winsLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/winsLabelFull"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/wins"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/winsLabel"
+            android:text="0"
+            android:textColor="@color/statGreen"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+    
+    <!-- Kills -->
+
+    <RelativeLayout
+        android:id="@+id/killsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/winsLayout"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/killsLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/killsLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/kills"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/killsLabel"
+            android:text="0"
+            android:textColor="@color/statGreen"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lastPlayedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/killsLayout"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/lastPlayedLabel"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/lastPlayedLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/lastPlayed"
+            style="@style/CardStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastPlayedLabel"
+            android:text="Never"
+            android:textColor="@color/statBlue"
+            android:textIsSelectable="false" 
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

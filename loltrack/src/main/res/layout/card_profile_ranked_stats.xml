@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <com.seago.loltrack.fonts.RobotoTextView
+        android:id="@+id/rankedStatsTitle"
+        style="@style/CardSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:text="Ranked Stats"
+        android:textIsSelectable="false" />
+
+    <View
+        android:id="@+id/underlineOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/LightGrey"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 3v3 Queue stats -->
+
+        <include
+            android:id="@+id/ranked3v3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/card_profile_ranked_stats_queue" />
+
+        <!-- Solo Queue stats -->
+
+        <include
+            android:id="@+id/rankedSolo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/card_profile_ranked_stats_queue" />
+
+        <!-- 5v5 Queue stats -->
+
+        <include
+            android:id="@+id/ranked5v5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/card_profile_ranked_stats_queue" />
+    </LinearLayout>
+
+</LinearLayout>

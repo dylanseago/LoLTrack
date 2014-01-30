@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" >
+
+    <TableRow
+        android:id="@+id/titleRow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <com.seago.loltrack.fonts.RobotoTextView
+            android:id="@+id/rankedStatsTitle"
+            style="@style/CardSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="2"
+            android:layout_weight="60"
+            android:text="Top Champions"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/winPercentLabel"
+            style="@style/CardStat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Win %"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/gamesLabel"
+            style="@style/CardStat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Games"
+            android:textIsSelectable="false" />
+    </TableRow>
+
+    <View
+        android:id="@+id/underlineOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/LightGrey"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/championOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/card_profile_champion_stats_row" />
+
+    <include
+        android:id="@+id/championTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/card_profile_champion_stats_row" />
+
+    <include
+        android:id="@+id/championThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/card_profile_champion_stats_row" />
+
+    <include
+        android:id="@+id/championFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/card_profile_champion_stats_row" />
+
+    <include
+        android:id="@+id/championFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/card_profile_champion_stats_row" />
+
+</TableLayout>

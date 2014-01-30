@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="searchResultsSettings"
+        android:title="@string/settings_searchResultsHeading" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="searchNA"
+            android:summary="@string/settings_searchNA_summ"
+            android:title="@string/settings_searchNA" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="searchEUW"
+            android:summary="@string/settings_searchEUW_summ"
+            android:title="@string/settings_searchEUW" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="searchEUNE"
+            android:summary="@string/settings_searchEUNE_summ"
+            android:title="@string/settings_searchEUNE" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="searchBR"
+            android:summary="@string/settings_searchBR_summ"
+            android:title="@string/settings_searchBR" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

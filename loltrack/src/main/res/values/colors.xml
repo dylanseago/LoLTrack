@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#e6e6e6</color>
+    <color name="LighestGrey">#e5e5e5</color>
+    <color name="LightGrey">#bcbcbc</color>
+    <color name="Grey">#959595</color>
+    <color name="DarkGrey">#8d8d8d</color>
+    <color name="DarkestGrey">#353535</color>
+    <color name="Black">#000000</color>
+    <color name="statRed">#e73f4c</color>
+    <color name="statGreen">#38b449</color>
+    <color name="statBlue">#213f99</color>
+    <color name="bgRed">#EACDCF</color>
+    <color name="bgGreen">#D8EBDA</color>
+
+</resources>

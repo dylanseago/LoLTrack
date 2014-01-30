@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="4dp" >
+
+    <TextView
+        android:id="@+id/summonerRegion"
+        style="@style/CardRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/summonerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/summoner_icon"
+            android:contentDescription="@string/contentDescription_summonerIcon"
+            android:maxHeight="64dp"
+            android:maxWidth="64dp"
+            android:scaleType="centerInside" />
+
+        <!-- Summoner name and level -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/summonerIcon"
+            android:paddingLeft="15dp" >
+
+            <com.seago.loltrack.fonts.RobotoTextView
+                android:id="@+id/summonerName"
+                style="@style/CardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/summonerLevel"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/summonerName"
+                android:textIsSelectable="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/underlineOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/LightGrey"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/rankedStatisticsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- Top ranking -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.seago.loltrack.fonts.RobotoLightTextView
+                android:id="@+id/topRankingTitle"
+                style="@style/CardSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:text="@string/topRanking"
+                android:textIsSelectable="false" />
+
+            <ImageView
+                android:id="@+id/topRankingImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRankingTitle"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/contentDescription_topRankingImage"
+                android:maxHeight="88dp"
+                android:maxWidth="88dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/crest_diamond_1" />
+
+            <com.seago.loltrack.fonts.RobotoLightTextView
+                android:id="@+id/topRanking"
+                style="@style/CardHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRankingImage"
+                android:layout_centerInParent="true"
+                android:paddingTop="10dp"
+                android:textIsSelectable="false" />
+
+            <!-- UNUSED -->
+
+            <TextView
+                android:id="@+id/topRankingLP"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRanking"
+                android:layout_centerInParent="true"
+                android:textIsSelectable="false" />
+
+            <!-- Wins/Losses for top ranking -->
+
+            <RelativeLayout
+                android:id="@+id/topRankingWinsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRankingLP"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/topRankingWinsLabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/winsLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topRankingWins"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topRankingWinsLabel"
+                    android:textColor="@color/statGreen"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topRankingLossesLabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topRankingWins"
+                    android:text="@string/lossesLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topRankingLosses"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topRankingLossesLabel"
+                    android:textColor="@color/statRed"
+                    android:textIsSelectable="false" />
+            </RelativeLayout>
+
+            <!-- KDA for top ranking -->
+
+            <RelativeLayout
+                android:id="@+id/topRankingKDALayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRankingWinsLayout"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/topRankingKDALabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/kdaLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topRankingKDA"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topRankingKDALabel"
+                    android:textColor="@color/statBlue"
+                    android:textIsSelectable="false" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Top Champion -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.seago.loltrack.fonts.RobotoLightTextView
+                android:id="@+id/topChampionTitle"
+                style="@style/CardSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:text="@string/topChampion"
+                android:textIsSelectable="false" />
+
+            <ImageView
+                android:id="@+id/topChampionImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topChampionTitle"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/champion_icon"
+                android:contentDescription="@string/contentDescription_topChampionImage"
+                android:maxHeight="88dp"
+                android:maxWidth="88dp"
+                android:scaleType="centerInside"
+                android:textIsSelectable="false" />
+
+            <com.seago.loltrack.fonts.RobotoLightTextView
+                android:id="@+id/topChampion"
+                style="@style/CardHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topChampionImage"
+                android:layout_centerInParent="true"
+                android:paddingTop="10dp"
+                android:textIsSelectable="false" />
+
+            <RelativeLayout
+                android:id="@+id/topChampionGamesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topChampion"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/topChampionGamesLabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/gamesLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topChampionGames"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topChampionGamesLabel"
+                    android:textColor="@color/statBlue"
+                    android:textIsSelectable="false" />
+            </RelativeLayout>
+
+            <!-- Wins/Losses for top champion -->
+            <!-- UNUSED -->
+
+            <RelativeLayout
+                android:id="@+id/topChampionWinsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topChampion"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/topChampionWinsLabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/winsLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topChampionWins"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topChampionWinsLabel"
+                    android:textColor="@color/statGreen"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topChampionLossesLabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topChampionWins"
+                    android:text="@string/lossesLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topChampionLosses"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topChampionLossesLabel"
+                    android:textColor="@color/statRed"
+                    android:textIsSelectable="false" />
+            </RelativeLayout>
+
+            <!-- KDA for Top Champion -->
+
+            <RelativeLayout
+                android:id="@+id/topChampionKDALayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topChampionGamesLayout"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/topChampionKDALabel"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/kdaLabel"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/topChampionKDA"
+                    style="@style/CardStat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/topChampionKDALabel"
+                    android:textColor="@color/statBlue"
+                    android:textIsSelectable="false" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Footer containing normal wins and time played -->
+
+    <View
+        android:id="@+id/underlineTwo"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/LightGrey"
+        android:visibility="visible" />
+
+    <!-- Normal Wins -->
+
+    <RelativeLayout
+        android:id="@+id/normalWinsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:id="@+id/normalWinsLabel"
+            style="@style/CardStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/normalWinsLabel"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/normalWins"
+            style="@style/CardStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/normalWinsLabel"
+            android:textColor="@color/statGreen"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <!--
+     This layout is unused until time played API is found 
+     
+    <LinearLayout
+        android:id="@+id/normalStatisticsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/normalWinsLabel"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/normalWinsLabel"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:id="@+id/normalWins"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/statGreen"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/timePlayedLabel"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timePlayedLabel"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:id="@+id/timePlayed"
+                style="@style/CardStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/statBlue"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+    </LinearLayout>
+    -->
+
+</LinearLayout>

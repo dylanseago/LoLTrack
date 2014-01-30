@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp" >
+
+    <ImageView
+        android:id="@+id/summonerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/summoner_icon"
+        android:contentDescription="@string/contentDescription_summonerIcon"
+        android:maxHeight="64dp"
+        android:maxWidth="64dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/profile_icon0" />
+
+    <!-- Summoner name and level -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/summonerIcon"
+        android:paddingLeft="16dp" >
+
+        <com.seago.loltrack.fonts.RobotoTextView
+            android:id="@+id/summonerName"
+            style="@style/CardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textIsSelectable="true" 
+            android:text="SummonerName"/>
+
+        <TextView
+            android:id="@+id/summonerLevel"
+            style="@style/CardStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/summonerName"
+            android:textIsSelectable="false" 
+            android:text="Region - SummonerLevel"/>
+    </RelativeLayout>
+
+</RelativeLayout>
