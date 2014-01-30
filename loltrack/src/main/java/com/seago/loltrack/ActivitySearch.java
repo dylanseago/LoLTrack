@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 
-import com.afollestad.cardsui.CardListView;
 import com.google.gson.Gson;
 import com.seago.loltrack.statRetriever.ErrorCard;
 import com.seago.loltrack.statRetriever.ErrorStat;
@@ -94,7 +93,7 @@ public class ActivitySearch extends ActivityBase {
     private void handleIntent(Intent intent) {
         // init CardView
         searchResultsAdapter = new LCardAdapter(this);
-        ((CardListView) findViewById(R.id.searchResults)).setAdapter(searchResultsAdapter);
+        ((LCardListView) findViewById(R.id.cardListView)).setAdapter(searchResultsAdapter);
 
         getPreferences();
 
@@ -111,10 +110,10 @@ public class ActivitySearch extends ActivityBase {
         // TODO Remove after done testing
         SummonerInfoTest info1 = new SummonerInfoTest("NA");
         LCard c1 = new CardSummonerTest(info1);
-        //c1.setOnClickListener(new CardOnClickListenerTest());
+        c1.setOnClickListener(new CardOnClickListenerTest());
         SummonerInfoTest info2 = new SummonerInfoTest("EU");
         LCard c2 = new CardSummonerTest(info2);
-        //c2.setOnClickListener(new CardOnClickListenerTest());
+        c2.setOnClickListener(new CardOnClickListenerTest());
 
         searchResultsAdapter.add(c1);
         searchResultsAdapter.add(c2);
@@ -242,9 +241,10 @@ public class ActivitySearch extends ActivityBase {
 
             // Passes the player into a SummonerCardInfo object which gathers the required stats from the json objects to be easily displayed on a card
             SummonerInfo info = new SummonerInfo(player);
+            LCard c = new CardSummoner(info);
+            c.setOnClickListener(new CardOnClickListener(player));
 
-            //TODO CardSummoner(info).setOnClickListener(new CardOnClickListener(player));
-            return new CardSummoner(info);
+            return c;
         }
 
         // Encodes a url to be used as a web address

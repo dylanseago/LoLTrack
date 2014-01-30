@@ -1,9 +1,5 @@
 package com.seago.loltrack;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
 import com.seago.loltrack.statRetriever.Player;
 import com.seago.loltrack.statRetriever.statLeagues.Leagues;
 import com.seago.loltrack.statRetriever.statLeagues.SummonerLeagues;
@@ -12,6 +8,10 @@ import com.seago.loltrack.statRetriever.statPlayer_stats.Player_stats;
 import com.seago.loltrack.statRetriever.statRanked_stats.LifetimeStatistics;
 import com.seago.loltrack.statRetriever.statRanked_stats.Ranked_stats;
 import com.seago.loltrack.statRetriever.statSummoner.Summoner;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 class SummonerInfo {
 	private static final String[]	tierLevel			= { "BRONZE", "SILVER", "GOLD", "PLATINUM", "DIAMOND", "CHALLENGER" };
@@ -58,6 +58,10 @@ class SummonerInfo {
 		if (p.getRanked_stats() != null && p.getRanked_stats().getSuccess())
 			this.setRankedStats(p.getRanked_stats());
 	}
+
+    public boolean getSuccess() {
+        return success;
+    }
 
 	// Sets the name, level and summmoner icon id
     void setProfileStats(Summoner summoner) {

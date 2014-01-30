@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.afollestad.cardsui.CardListView;
-
 import java.util.ArrayList;
 
 class FragmentMatches extends Fragment {
@@ -74,7 +72,7 @@ class FragmentMatches extends Fragment {
 		rvm.add(new ResourceValueMap(null, R.id.minions, "125"));
         cardAdapter.add(new CardMatch(rvm));
 
-        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
+        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
 		return view;

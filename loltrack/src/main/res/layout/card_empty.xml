@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/card_outer">
+    <!--suppress AndroidLintContentDescription -->
+    <ImageView style="@style/card_shadow" />
+
+</LinearLayout>

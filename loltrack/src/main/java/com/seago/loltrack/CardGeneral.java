@@ -19,6 +19,9 @@ class CardGeneral extends LCard {
 
 	@Override
     public View getCardContent(View view) {
+        if (view.findViewById(R.id.card_content) == null)
+            view = super.getCardContent(view);
+
 		// Sets all views to specified values
         for (ResourceValueMap aViewValueMap : viewValueMap) {
             View v;

@@ -20,7 +20,9 @@ class CardChampionList extends LCard {
 
 	@Override
 	public View getCardContent(View view) {
-		LinearLayout tlView = (LinearLayout) view;
+        view = super.getCardContent(view);
+
+		LinearLayout tlView = (LinearLayout) view.findViewById(R.id.card_content);
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_champion_list_header, null));
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));

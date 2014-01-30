@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.afollestad.cardsui.CardListView;
-
 import java.util.ArrayList;
 
 class FragmentRankedStats extends Fragment {
@@ -39,7 +37,7 @@ class FragmentRankedStats extends Fragment {
 
 		cardAdapter.add(new CardChampionList(championValueMap));
 
-        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
+        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
 		return view;

@@ -6,7 +6,10 @@
 package com.seago.loltrack;
 
 import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 
 import com.afollestad.cardsui.Card;
 import com.afollestad.cardsui.CardBase;
@@ -14,18 +17,37 @@ import com.afollestad.cardsui.CardHeader;
 
 public abstract class LCard implements CardBase<LCard> {
 
-    private boolean isClickable;
-    private int mLayout;
+    private int contentLayout;
+    private OnClickListener onClickListener = null;
 
-    protected LCard(int layout) {
-        mLayout = layout;
+    protected LCard(int contentLayout) {
+        this.contentLayout = contentLayout;
     }
 
-    public abstract View getCardContent(View v) ;
+    protected LCard(int contentLayout, OnClickListener onClickListener) {
+        this(contentLayout);
+        this.onClickListener = onClickListener;
+    }
+
+    /**
+     * Inflates the cards content layout
+     */
+    public View getCardContent(View view) {
+        View child = LayoutInflater.from(view.getContext()).inflate(this.getContentLayout(), null);
+        ((ViewGroup) view).addView(child, 0);
+        return view;
+    }
 
     @Override
     public int getLayout() {
-        return mLayout;
+        return R.layout.card_empty;
+    }
+
+    /**
+     * @return The layout of the cards content
+     */
+    public int getContentLayout() {
+        return contentLayout;
     }
 
     @Override
@@ -44,20 +66,20 @@ public abstract class LCard implements CardBase<LCard> {
     }
 
     /**
-     * Sets whether or not the card is clickable, setting it to false will turn the card's list selector off
-     * and the list's OnItemClickListener will not be called.
-     * <p/>
-     * This <b>does not</b> override the isClickable value set to a {@link LCardAdapter}, however.
+     * Sets the onClickListener for this card.
      */
-    public LCard setClickable(boolean clickable) {
-        isClickable = clickable;
+    public LCard setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
         return this;
+    }
+
+    public OnClickListener getOnClickListener() {
+        return this.onClickListener;
     }
 
     @Override
     public boolean isClickable() {
-        // The card will not respond to being tapped
-        return isClickable;
+        return onClickListener != null;
     }
 
     @Override
@@ -93,11 +115,11 @@ public abstract class LCard implements CardBase<LCard> {
 
     @Override
     public Object getSilkId() {
-        return mLayout;
+        return getContentLayout();
     }
 
     @Override
     public boolean equalTo(LCard other) {
-        return mLayout == other.mLayout;
+        return this.getSilkId() == other.getSilkId();
     }
 }

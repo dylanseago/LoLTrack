@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.afollestad.cardsui.CardListView;
-
 import java.util.ArrayList;
 
 public class FragmentProfile extends Fragment {
@@ -157,7 +155,7 @@ public class FragmentProfile extends Fragment {
 
 		}
 
-        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
+        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
 		return view;

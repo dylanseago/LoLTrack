@@ -98,7 +98,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/card_shadow</item>
         <item name="android:src">@drawable/card_shadow</item>
-        <item name="android:layout_below">@+id/inner_frame</item>
+        <item name="android:layout_below">@+id/card_content</item>
     </style>
 
     <style name="card_outer">
@@ -112,7 +112,7 @@
         <item name="android:descendantFocusability">blocksDescendants</item>
     </style>
 
-    <style name="card_inner">
+    <style name="card_content">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:paddingTop">@dimen/card_inner_padding_top</item>

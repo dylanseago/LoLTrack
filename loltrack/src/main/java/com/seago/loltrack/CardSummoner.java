@@ -15,6 +15,8 @@ class CardSummoner extends LCard {
 
 	@Override
 	public View getCardContent(View view) {
+        view = super.getCardContent(view);
+
 		// Sets the basic profile information for the summoner
 		((TextView) view.findViewById(R.id.summonerRegion)).setText(info.region);
 		try {

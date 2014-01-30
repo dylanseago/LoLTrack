@@ -25,6 +25,7 @@ class LCardAdapter extends CardAdapter {
 
     public void add(LCard toAdd){
         registerLayout(toAdd.getLayout());
+        registerLayout(toAdd.getContentLayout());
         super.add(toAdd);
     }
 }
