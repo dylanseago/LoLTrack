@@ -115,12 +115,19 @@
     <style name="card_content">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:paddingTop">@dimen/card_inner_padding_top</item>
-        <item name="android:paddingBottom">@dimen/card_inner_padding_bottom</item>
-        <item name="android:paddingLeft">@dimen/card_inner_padding_left</item>
-        <item name="android:paddingRight">@dimen/card_inner_padding_right</item>
         <item name="android:background">@drawable/card_selector</item>
         <item name="android:duplicateParentState">true</item>
+    </style>
+
+    <style name="card_content.single_padding">
+        <item name="android:paddingTop">@dimen/card_single_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/card_single_padding_vertical</item>
+        <item name="android:paddingLeft">@dimen/card_single_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/card_single_padding_horizontal</item>
+    </style>
+
+    <style name="card_content.double_padding">
+        <item name="android:padding">@dimen/card_double_padding</item>
     </style>
 
 

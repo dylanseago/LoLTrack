@@ -17,10 +17,9 @@
     <dimen name="card_outer_padding_left">8dp</dimen>
     <dimen name="card_outer_padding_right">8dp</dimen>
 
-    <dimen name="card_inner_padding_top">12dp</dimen>
-    <dimen name="card_inner_padding_bottom">16dp</dimen>
-    <dimen name="card_inner_padding_left">16dp</dimen>
-    <dimen name="card_inner_padding_right">16dp</dimen>
+    <dimen name="card_double_padding">16dp</dimen>
+    <dimen name="card_single_padding_vertical">8dp</dimen>
+    <dimen name="card_single_padding_horizontal">0dp</dimen>
 
     <dimen name="card_action_touchdelegate">25dp</dimen>
     <dimen name="card_shadow">3dp</dimen>
