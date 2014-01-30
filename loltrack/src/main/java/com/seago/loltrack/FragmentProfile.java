@@ -1,13 +1,14 @@
 package com.seago.loltrack;
 
-import java.util.ArrayList;
-
-import android.view.LayoutInflater;
 import android.app.Fragment;
-
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.afollestad.cardsui.CardListView;
+
+import java.util.ArrayList;
 
 public class FragmentProfile extends Fragment {
 
@@ -16,8 +17,8 @@ public class FragmentProfile extends Fragment {
 		// Inflates the layout
 		View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-		CardUI cardUI = (CardUI) view.findViewById(R.id.cardUI);
-		cardUI.setSwipeable(false);
+        LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
+        cardAdapter.setCardsClickable(false);
 
 		// Sets the values for the header card
 		{
@@ -40,7 +41,7 @@ public class FragmentProfile extends Fragment {
 			viewValueMap.add(new ResourceValueMap(null, R.id.summonerLevel, summonerLevel));
 
 			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardUI.addCard(card);
+			cardAdapter.add(card);
 		}
 
 		// Sets the values for the ranked stats card
@@ -69,7 +70,7 @@ public class FragmentProfile extends Fragment {
 			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.lp, "55 LP"));
 			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.wins, 119));
 			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.losses, 88));
-			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, 3.14));
+			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.KDA, 3.14));
 			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.lastPlayedLabel));
 			viewValueMap.add(new ResourceValueMap(R.id.rankedSolo, R.id.lastPlayed));
 
@@ -79,12 +80,12 @@ public class FragmentProfile extends Fragment {
 			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.lp, "19 LP"));
 			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.wins, 12));
 			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.losses, 8));
-			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, 2.55));
+			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.KDA, 2.55));
 			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.lastPlayedLabel));
 			viewValueMap.add(new ResourceValueMap(R.id.ranked5v5, R.id.lastPlayed));
 
 			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardUI.addCard(card);
+			cardAdapter.add(card);
 
 		}
 
@@ -115,7 +116,7 @@ public class FragmentProfile extends Fragment {
 			viewValueMap.add(new ResourceValueMap(R.id.crystalScar, R.id.lastPlayed, "1 month ago"));
 
 			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardUI.addCard(card);
+			cardAdapter.add(card);
 
 		}
 
@@ -152,11 +153,13 @@ public class FragmentProfile extends Fragment {
 			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.games, 20));
 
 			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardUI.addCard(card);
+			cardAdapter.add(card);
 
 		}
-		cardUI.refresh();
-		// Inflate the layout for this fragment
+
+        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
+        cardListView.setAdapter(cardAdapter);
+
 		return view;
 	}
 }

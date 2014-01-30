@@ -17,7 +17,7 @@ public abstract class LCard implements CardBase<LCard> {
     private boolean isClickable;
     private int mLayout;
 
-    public LCard(int layout) {
+    protected LCard(int layout) {
         mLayout = layout;
     }
 

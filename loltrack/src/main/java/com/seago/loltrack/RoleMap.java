@@ -1,6 +1,6 @@
 package com.seago.loltrack;
 
-public class RoleMap {
+class RoleMap {
 	private int		championId;
 	private String	championName;
 	private int[]	role;

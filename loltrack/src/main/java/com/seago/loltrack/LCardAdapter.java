@@ -11,7 +11,7 @@ import android.view.View;
 import com.afollestad.cardsui.CardAdapter;
 import com.afollestad.cardsui.CardBase;
 
-public class LCardAdapter extends CardAdapter {
+class LCardAdapter extends CardAdapter {
 
     public LCardAdapter(Activity context) {
         super(context);

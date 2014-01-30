@@ -243,10 +243,9 @@ public class ActivitySearch extends ActivityBase {
 
             // Passes the player into a SummonerCardInfo object which gathers the required stats from the json objects to be easily displayed on a card
             SummonerInfo info = new SummonerInfo(player);
-            LCard c = new CardSummoner(info);
 
-            //TODO Fix this: c.setOnClickListener(new CardOnClickListener(player));
-            return c;
+            //TODO CardSummoner(info).setOnClickListener(new CardOnClickListener(player));
+            return new CardSummoner(info);
         }
 
         // Encodes a url to be used as a web address

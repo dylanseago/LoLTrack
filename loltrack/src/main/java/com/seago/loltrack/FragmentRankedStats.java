@@ -1,13 +1,14 @@
 package com.seago.loltrack;
 
-import java.util.ArrayList;
-
-import android.view.LayoutInflater;
 import android.app.Fragment;
-
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.afollestad.cardsui.CardListView;
+
+import java.util.ArrayList;
 
 class FragmentRankedStats extends Fragment {
 	@Override
@@ -15,12 +16,10 @@ class FragmentRankedStats extends Fragment {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_ranked_stats, container, false);
 
-		CardUI cardUI = (CardUI) view.findViewById(R.id.cardUI);
-		cardUI.setSwipeable(false);
+		LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
 
 		CardGeneral cg = new CardGeneral(R.layout.card_stats_header, new ArrayList<ResourceValueMap>());
-		// TODO Prevent a bug in 2.x versions of android that causes the keyboard to sometimes not appear when the EditText is given focus
-		cardUI.addCard(cg);
+		cardAdapter.add(cg);
 
 		ArrayList<ChampionValueMap> championValueMap = new ArrayList<ChampionValueMap>();
 		championValueMap.add(new ChampionValueMap(1, "Jayce", 58.0, 60));
@@ -38,9 +37,10 @@ class FragmentRankedStats extends Fragment {
 		championValueMap.add(new ChampionValueMap(13, "Lee Sin", 0.0, 2));
 		championValueMap.add(new ChampionValueMap(105, "Evelynn", 100.0, 1));
 
-		cardUI.addCard(new CardChampionList(championValueMap));
+		cardAdapter.add(new CardChampionList(championValueMap));
 
-		cardUI.refresh();
+        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
+        cardListView.setAdapter(cardAdapter);
 
 		return view;
 	}

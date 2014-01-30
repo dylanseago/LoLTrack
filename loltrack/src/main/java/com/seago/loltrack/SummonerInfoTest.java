@@ -1,6 +1,6 @@
 package com.seago.loltrack;
 
-public class SummonerInfoTest {
+class SummonerInfoTest {
 	public boolean					success				= true;
 
 	public String					region				= "NA";

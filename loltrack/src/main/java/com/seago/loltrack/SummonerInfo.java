@@ -13,11 +13,11 @@ import com.seago.loltrack.statRetriever.statRanked_stats.LifetimeStatistics;
 import com.seago.loltrack.statRetriever.statRanked_stats.Ranked_stats;
 import com.seago.loltrack.statRetriever.statSummoner.Summoner;
 
-public class SummonerInfo {
+class SummonerInfo {
 	private static final String[]	tierLevel			= { "BRONZE", "SILVER", "GOLD", "PLATINUM", "DIAMOND", "CHALLENGER" };
 	private static final String[]	divLevel			= { "V", "IV", "III", "II", "I" };
 
-	public boolean					success				= false;
+	private boolean					success				= false;
 
 	public String					region				= null;
 	public String					name				= null;

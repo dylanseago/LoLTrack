@@ -51,5 +51,6 @@ class CardChampionList extends LCard {
 
 	public void sortByRole(int roleId) {
         //TODO Implement
+        this.championValueMapSorted = championValueMap;
 	}
 }

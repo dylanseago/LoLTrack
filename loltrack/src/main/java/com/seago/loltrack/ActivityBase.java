@@ -1,5 +1,6 @@
 package com.seago.loltrack;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
+@SuppressLint("Registered")
 class ActivityBase extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
