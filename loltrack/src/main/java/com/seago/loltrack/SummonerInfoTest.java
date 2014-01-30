@@ -8,7 +8,7 @@ class SummonerInfoTest {
 	public int						level				= 30;
 	public int						summonerIconId		= 534;
 
-	public String					topRanking			= "CHALLENGER";
+	public String					topRanking			= "Challenger";
 	public int						topRankingLP		= 219;
 	public int						topRankingWins		= 820;
 	public int						topRankingLosses	= 723;

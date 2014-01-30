@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 
-import com.afollestad.cardsui.CardAdapter;
 import com.afollestad.cardsui.CardListView;
 import com.google.gson.Gson;
 import com.seago.loltrack.statRetriever.ErrorCard;
@@ -36,7 +35,7 @@ import java.util.ArrayList;
 
 public class ActivitySearch extends ActivityBase {
     private static final String DTAG = "SearchActivity";
-    private CardAdapter searchResultsAdapter;
+    private LCardAdapter searchResultsAdapter;
     private ProgressBar progressBar;
     private boolean searchNA;
     private boolean searchEUW;
@@ -94,7 +93,7 @@ public class ActivitySearch extends ActivityBase {
     // Handles this activities intent
     private void handleIntent(Intent intent) {
         // init CardView
-        searchResultsAdapter = new CardAdapter(this);
+        searchResultsAdapter = new LCardAdapter(this);
         ((CardListView) findViewById(R.id.searchResults)).setAdapter(searchResultsAdapter);
 
         getPreferences();
