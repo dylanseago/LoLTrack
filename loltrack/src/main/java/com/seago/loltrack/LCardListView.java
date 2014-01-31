@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import com.afollestad.cardsui.CardAdapter;
 import com.afollestad.cardsui.CardBase;
-import com.afollestad.cardsui.CardCursorAdapter;
 import com.afollestad.cardsui.CardHeader;
 
 /**
@@ -74,9 +73,6 @@ public class LCardListView extends ListView implements AdapterView.OnItemClickLi
     public void setAdapter(ListAdapter adapter) {
         if (adapter instanceof CardAdapter) {
             setAdapter((CardAdapter) adapter);
-            return;
-        } else if (adapter instanceof CardCursorAdapter) {
-            setAdapter((CardCursorAdapter) adapter);
             return;
         }
         throw new RuntimeException("The LCardListView only accepts CardAdapters.");
