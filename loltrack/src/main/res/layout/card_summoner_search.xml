@@ -87,7 +87,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:paddingBottom="10dp"
-                android:text="@string/topRanking"
+                android:text="@string/label_topRanking"
                 android:textIsSelectable="false" />
 
             <ImageView
@@ -214,7 +214,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:paddingBottom="10dp"
-                android:text="@string/topChampion"
+                android:text="@string/label_topChampion"
                 android:textIsSelectable="false" />
 
             <ImageView
@@ -254,7 +254,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/gamesLabel"
+                    android:text="@string/label_games"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -369,7 +369,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/normalWinsLabel"
+            android:text="@string/label_normalWins"
             android:textIsSelectable="false" />
 
         <TextView

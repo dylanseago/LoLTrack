@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/length"
                     android:layout_centerHorizontal="true"
-                    android:text="Length" />
+                    android:text="@string/label_gameLength" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -123,7 +123,7 @@
                         android:layout_marginRight="4dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:contentDescription="Summoner Spell 1"
+                        android:contentDescription="@string/contentDescription_spell1"
                         android:scaleType="centerInside"
                         android:src="@drawable/flash" />
 
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:contentDescription="Summoner Spell 2"
+                        android:contentDescription="@string/contentDescription_spell2"
                         android:scaleType="centerInside"
                         android:src="@drawable/ignite" />
                 </LinearLayout>
@@ -146,7 +146,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_toLeftOf="@+id/item2"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 1"
+                    android:contentDescription="@string/contentDescription_item1"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -160,7 +160,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_toLeftOf="@+id/item3"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 2"
+                    android:contentDescription="@string/contentDescription_item2"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -174,7 +174,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="2dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 3"
+                    android:contentDescription="@string/contentDescription_item3"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -189,7 +189,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_toLeftOf="@+id/item5"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 4"
+                    android:contentDescription="@string/contentDescription_item4"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -204,7 +204,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_toLeftOf="@+id/item6"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 5"
+                    android:contentDescription="@string/contentDescription_item5"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -219,7 +219,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginTop="2dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Item 6"
+                    android:contentDescription="@string/contentDescription_item6"
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/kda"
                     android:layout_centerHorizontal="true"
-                    android:text="KDA" />
+                    android:text="@string/label_kda" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -282,7 +282,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gold"
                     android:layout_centerHorizontal="true"
-                    android:text="Gold" />
+                    android:text="@string/label_gold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -307,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/minions"
                     android:layout_centerHorizontal="true"
-                    android:text="Minions" />
+                    android:text="@string/label_minions" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

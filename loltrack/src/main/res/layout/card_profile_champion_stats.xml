@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:layout_span="2"
             android:layout_weight="60"
-            android:text="Top Champions"
+            android:text="@string/header_topChampions"
             android:textIsSelectable="false" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:layout_weight="20"
             android:gravity="center"
-            android:text="Win %"
+            android:text="@string/header_winPercent"
             android:textIsSelectable="false" />
 
         <TextView
@@ -41,7 +41,7 @@
             android:layout_gravity="center"
             android:layout_weight="20"
             android:gravity="center"
-            android:text="Games"
+            android:text="@string/header_games"
             android:textIsSelectable="false" />
     </TableRow>
 

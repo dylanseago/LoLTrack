@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/seasonOneCheckBox"
                 android:layout_centerHorizontal="true"
-                android:text="Season 1" />
+                android:text="@string/label_season1" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/seasonTwoCheckBox"
                 android:layout_centerHorizontal="true"
-                android:text="Season 2" />
+                android:text="@string/label_season2" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -100,7 +100,31 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/seasonThreeCheckBox"
                 android:layout_centerHorizontal="true"
-                android:text="Season 3" />
+                android:text="@string/label_season3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <CheckBox
+                android:id="@+id/seasonFourCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/seasonFourCheckBoxLabel"
+                style="@style/LabelTiny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seasonFourCheckBox"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_season4" />
         </RelativeLayout>
     </LinearLayout>
 

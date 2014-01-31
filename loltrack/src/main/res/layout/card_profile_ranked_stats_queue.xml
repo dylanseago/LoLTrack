@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:text="Queue"
         android:textIsSelectable="false" />
 
     <ImageView
@@ -140,7 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:text="@string/lastPlayedLabel"
+            android:text="@string/label_lastPlayed"
             android:textIsSelectable="false" />
 
         <TextView

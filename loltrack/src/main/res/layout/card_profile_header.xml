@@ -32,8 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textIsSelectable="true" 
-            android:text="SummonerName"/>
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/summonerLevel"
@@ -41,8 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/summonerName"
-            android:textIsSelectable="false" 
-            android:text="Region - SummonerLevel"/>
+            android:textIsSelectable="false" />
     </RelativeLayout>
 
 </RelativeLayout>

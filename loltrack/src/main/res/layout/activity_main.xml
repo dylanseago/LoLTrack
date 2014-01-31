@@ -1,110 +1,105 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comingSoonScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
     android:background="@color/background"
-    tools:context=".ActivityMain" >
+    tools:context=".ActivityMain">
 
-    <ScrollView
-        android:id="@+id/comingSoonScrollView"
+    <RelativeLayout
+        android:id="@+id/comingSoonRelativeLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" >
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/comingSoonRelativeLayout"
+        <ImageView
+            android:id="@+id/image_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/contentDescription_banner"
+            android:maxHeight="80sp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="7dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/gfx_header" />
+
+        <com.seago.loltrack.fonts.RobotoTextView
+            android:id="@+id/bannerSubtitle"
+            style="@style/bannerSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_banner"
+            android:text="@string/bannerSubtitle" />
+
+        <com.seago.loltrack.fonts.RobotoTextView
+            android:id="@+id/comingSoonHeader"
+            style="@style/ComingSoonHeader"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_below="@+id/bannerSubtitle"
+            android:layout_marginTop="10dp"
+            android:text="@string/comingSoonHeader" />
 
-            <ImageView
-                android:id="@+id/image_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="left"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/contentDescription_banner"
-                android:maxHeight="80sp"
-                android:paddingLeft="7dp"
-                android:paddingRight="7dp"
-                android:paddingTop="7dp"
-                android:scaleType="fitStart"
-                android:src="@drawable/gfx_header" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry1"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonHeader"
+            android:text="@string/comingSoonEntry1" />
 
-            <com.seago.loltrack.fonts.RobotoTextView
-                android:id="@+id/bannerSubtitle"
-                style="@style/bannerSubtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/image_banner"
-                android:text="@string/bannerSubtitle" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry2"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry1"
+            android:text="@string/comingSoonEntry2" />
 
-            <com.seago.loltrack.fonts.RobotoTextView
-                android:id="@+id/comingSoonHeader"
-                style="@style/ComingSoonHeader"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bannerSubtitle"
-                android:layout_marginTop="10dp"
-                android:text="@string/comingSoonHeader" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry3"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry2"
+            android:text="@string/comingSoonEntry3" />
 
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry1"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonHeader"
-                android:text="@string/comingSoonEntry1" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry4"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry3"
+            android:text="@string/comingSoonEntry4" />
 
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry2"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry1"
-                android:text="@string/comingSoonEntry2" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry5"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry4"
+            android:text="@string/comingSoonEntry5" />
 
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry3"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry2"
-                android:text="@string/comingSoonEntry3" />
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry6"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry5"
+            android:text="@string/comingSoonEntry6" />
 
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry4"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry3"
-                android:text="@string/comingSoonEntry4" />
-
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry5"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry4"
-                android:text="@string/comingSoonEntry5" />
-
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry6"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry5"
-                android:text="@string/comingSoonEntry6" />
-
-            <com.seago.loltrack.fonts.RobotoLightTextView
-                android:id="@+id/comingSoonEntry7"
-                style="@style/ComingSoonEntry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/comingSoonEntry6"
-                android:text="@string/comingSoonEntry7" />
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/comingSoonEntry7"
+            style="@style/ComingSoonEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comingSoonEntry6"
+            android:text="@string/comingSoonEntry7" />
+    </RelativeLayout>
+</ScrollView>

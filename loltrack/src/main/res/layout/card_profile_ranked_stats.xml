@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:paddingRight="8dp"
-        android:text="Ranked Stats"
+        android:text="@string/header_rankedStats"
         android:textIsSelectable="false" />
 
     <View

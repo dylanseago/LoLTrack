@@ -45,7 +45,6 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/championIcon"
             android:paddingLeft="8dp"
-            android:text="ChampionName"
             android:textIsSelectable="false" />
     </RelativeLayout>
 
