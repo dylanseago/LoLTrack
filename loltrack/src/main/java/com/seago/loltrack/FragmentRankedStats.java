@@ -8,16 +8,19 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-class FragmentRankedStats extends Fragment {
+public class FragmentRankedStats extends Fragment {
+
+    public FragmentRankedStats() {
+        super();
+    }
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_ranked_stats, container, false);
 
 		LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
-
-		CardGeneral cg = new CardGeneral(R.layout.card_stats_header, new ArrayList<ResourceValueMap>());
-		cardAdapter.add(cg);
+		cardAdapter.add(new CardStatsHeader());
 
 		ArrayList<ChampionValueMap> championValueMap = new ArrayList<ChampionValueMap>();
 		championValueMap.add(new ChampionValueMap(1, "Jayce", 58.0, 60));
@@ -39,6 +42,7 @@ class FragmentRankedStats extends Fragment {
 
         LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
+        cardListView.setItemsCanFocus(true);
 
 		return view;
 	}

@@ -4,7 +4,7 @@
     style="@style/card_content.double_padding">
 
     <EditText
-        android:id="@+id/search"
+        android:id="@+id/searchChampions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -14,15 +14,13 @@
         android:ems="10"
         android:hint="@string/hint_searchRankedStats"
         android:inputType="textNoSuggestions"
-        android:singleLine="true" >
-
-        <requestFocus />
-    </EditText>
+        android:singleLine="true"
+        android:focusable="true"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/searchChampions"
         android:orientation="horizontal" >
 
         <Spinner
@@ -90,8 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:checked="true" />
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:id="@+id/seasonThreeCheckBoxLabel"

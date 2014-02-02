@@ -6,10 +6,8 @@
 package com.seago.loltrack;
 
 import android.graphics.drawable.Drawable;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 
 import com.afollestad.cardsui.Card;
 import com.afollestad.cardsui.CardBase;
@@ -32,21 +30,12 @@ public abstract class LCard implements CardBase<LCard> {
     /**
      * Inflates the cards content layout
      */
-    public View getCardContent(View view) {
-        View child = LayoutInflater.from(view.getContext()).inflate(this.getContentLayout(), null);
-        ((ViewGroup) view).addView(child, 0);
-        return view;
-    }
-
-    @Override
-    public int getLayout() {
-        return R.layout.card_empty;
-    }
+    public abstract View getCardContent(View view) ;
 
     /**
      * @return The layout of the cards content
      */
-    public int getContentLayout() {
+    public int getLayout() {
         return contentLayout;
     }
 
@@ -65,16 +54,16 @@ public abstract class LCard implements CardBase<LCard> {
         return false;
     }
 
+    public OnClickListener getOnClickListener() {
+        return this.onClickListener;
+    }
+
     /**
      * Sets the onClickListener for this card.
      */
     public LCard setOnClickListener(OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
         return this;
-    }
-
-    public OnClickListener getOnClickListener() {
-        return this.onClickListener;
     }
 
     @Override
@@ -115,7 +104,7 @@ public abstract class LCard implements CardBase<LCard> {
 
     @Override
     public Object getSilkId() {
-        return getContentLayout();
+        return getLayout();
     }
 
     @Override

@@ -15,7 +15,6 @@ class CardSummonerTest extends LCard {
 
 	@Override
 	public View getCardContent(View view) {
-        view = super.getCardContent(view);
 
 		// Sets the basic profile information for the summoner
 		((TextView) view.findViewById(R.id.summonerRegion)).setText(info.region);
@@ -59,7 +58,7 @@ class CardSummonerTest extends LCard {
 				((ImageView) view.findViewById(R.id.topChampionImage)).setImageResource(Utils.getDrawableResource("champion_icon_" + info.topChampion));
 			} catch (Exception e) {
 				// Sets to default icon if iconId doesnt exist as a drawable
-				((ImageView) view.findViewById(R.id.topChampionImage)).setImageResource(Utils.getDrawableResource("champion_icon_unknown"));
+				((ImageView) view.findViewById(R.id.topChampionImage)).setImageResource(Utils.getDrawableResource("icon_unknown"));
 			}
 			((TextView) view.findViewById(R.id.topChampion)).setText(info.topChampion);
 			((TextView) view.findViewById(R.id.topChampionGames)).setText(Integer.toString(info.topChampionGames));
@@ -68,7 +67,7 @@ class CardSummonerTest extends LCard {
 		// Hides summoners top champion if not given
 		else {
 			((TextView) view.findViewById(R.id.topChampion)).setText("Unknown");
-			((ImageView) view.findViewById(R.id.topChampionImage)).setImageResource(Utils.getDrawableResource("champion_icon_unknown"));
+			((ImageView) view.findViewById(R.id.topChampionImage)).setImageResource(Utils.getDrawableResource("icon_unknown"));
 			
 			view.findViewById(R.id.topChampionGamesLabel).setVisibility(View.GONE);
 			view.findViewById(R.id.topChampionGames).setVisibility(View.GONE);

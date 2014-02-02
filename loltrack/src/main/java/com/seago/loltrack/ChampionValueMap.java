@@ -2,7 +2,7 @@ package com.seago.loltrack;
 
 import java.util.HashMap;
 
-public class ChampionValueMap extends HashMap<String, String> {
+class ChampionValueMap extends HashMap<String, String> {
 	private static final long	serialVersionUID	= 1L;
 
 	public ChampionValueMap(Integer standing, String name, Double winPercent, Integer games) {

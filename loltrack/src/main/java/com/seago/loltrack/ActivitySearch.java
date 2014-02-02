@@ -45,6 +45,8 @@ public class ActivitySearch extends ActivityBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        // TODO Fix researching on screen rotate
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // init ProgressBar
@@ -120,7 +122,7 @@ public class ActivitySearch extends ActivityBase {
         progressBar.setVisibility(View.GONE);
 
 		/*
-		// Checks for null query
+        // Checks for null query
 		if (query == null)
 			throwErrorCard("Search query is null.");
 		else {

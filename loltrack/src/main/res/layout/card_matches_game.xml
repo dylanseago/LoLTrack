@@ -23,7 +23,7 @@
             android:maxHeight="68dp"
             android:maxWidth="68dp"
             android:scaleType="centerInside"
-            android:src="@drawable/champion_icon_annie" />
+            android:src="@drawable/icon_unknown" />
 
         <RelativeLayout
             android:id="@+id/outcomeLayout"
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="Victory"
+                android:text="Outcome"
                 android:textColor="@color/statGreen" />
 
             <com.seago.loltrack.fonts.RobotoLightTextView
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/outcome"
                 android:layout_centerHorizontal="true"
-                android:text="Normal 5v5" />
+                android:text="Game Mode" />
 
             <TextView
                 android:id="@+id/timeSince"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mode"
                 android:layout_centerHorizontal="true"
-                android:text="2 days ago" />
+                android:text="0 days ago" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="30:42" />
+                    android:text="00:00" />
 
                 <TextView
                     android:id="@+id/lengthLabel"
@@ -125,7 +125,7 @@
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/contentDescription_spell1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/flash" />
+                        android:src="@drawable/icon_unknown" />
 
                     <ImageView
                         android:id="@+id/spell2"
@@ -135,7 +135,7 @@
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/contentDescription_spell2"
                         android:scaleType="centerInside"
-                        android:src="@drawable/ignite" />
+                        android:src="@drawable/icon_unknown" />
                 </LinearLayout>
 
                 <ImageView
@@ -150,7 +150,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
 
                 <ImageView
                     android:id="@+id/item2"
@@ -164,7 +164,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
 
                 <ImageView
                     android:id="@+id/item3"
@@ -178,7 +178,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
 
                 <ImageView
                     android:id="@+id/item4"
@@ -193,7 +193,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
 
                 <ImageView
                     android:id="@+id/item5"
@@ -208,7 +208,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
 
                 <ImageView
                     android:id="@+id/item6"
@@ -223,7 +223,7 @@
                     android:maxHeight="16dp"
                     android:maxWidth="16dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/item_example" />
+                    android:src="@drawable/icon_unknown" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -248,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="11/5/8" />
+                    android:text="0/0/0" />
 
                 <TextView
                     android:id="@+id/kdaLabel"
@@ -273,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="11.2k" />
+                    android:text="0" />
 
                 <TextView
                     android:id="@+id/goldLabel"
@@ -298,7 +298,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="168" />
+                    android:text="0" />
 
                 <TextView
                     android:id="@+id/minionsLabel"

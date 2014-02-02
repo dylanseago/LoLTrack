@@ -15,7 +15,7 @@
         android:maxHeight="64dp"
         android:maxWidth="64dp"
         android:scaleType="centerInside"
-        android:src="@drawable/profile_icon0" />
+        android:src="@drawable/icon_unknown" />
 
     <!-- Summoner name and level -->
 
@@ -32,7 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textIsSelectable="true" />
+            android:textIsSelectable="true"
+            android:text="Summoner"/>
 
         <TextView
             android:id="@+id/summonerLevel"
@@ -40,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/summonerName"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:text="0"/>
     </RelativeLayout>
 
 </RelativeLayout>

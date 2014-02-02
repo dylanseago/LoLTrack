@@ -16,9 +16,9 @@ import com.afollestad.cardsui.CardHeader;
  * A {@link ListView} that automates many card related things, such as disabling the background list selector,
  * removing the list divider, and calling a {@link CardHeader}'s ActionListener when tapped by the user.
  *
- * @author Aidan Follestad (afollestad)
+ * @author Aidan Follestad (afollestad), Dylan Seago
  */
-public class LCardListView extends ListView implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+class LCardListView extends ListView implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
     private OnItemClickListener mItemClickListener;
     private OnItemLongClickListener mItemLongClickListener;
@@ -67,21 +67,21 @@ public class LCardListView extends ListView implements AdapterView.OnItemClickLi
     }
 
     /**
-     * @deprecated Use {@link #setAdapter(CardAdapter)} instead.
+     * @deprecated Use {@link #setAdapter(LCardAdapter)} instead.
      */
     @Override
     public void setAdapter(ListAdapter adapter) {
         if (adapter instanceof CardAdapter) {
-            setAdapter((CardAdapter) adapter);
+            setAdapter((LCardAdapter) adapter);
             return;
         }
-        throw new RuntimeException("The LCardListView only accepts CardAdapters.");
+        throw new RuntimeException("The LCardListView only accepts LCardAdapters.");
     }
 
     /**
-     * Sets the list's adapter, enforces the use of only a CardAdapter, not any other type of adapter
+     * Sets the list's adapter, enforces the use of only a LCardAdapter, not any other type of adapter
      */
-    public void setAdapter(CardAdapter adapter) {
+    public void setAdapter(LCardAdapter adapter) {
         super.setAdapter(adapter);
     }
 

@@ -13,7 +13,9 @@ public class ActivityMain extends ActivityBase {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        if (savedInstanceState == null) {
+		    PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        }
 	}
 
 	@Override

@@ -28,7 +28,6 @@ public class ErrorCard extends LCard {
 
 	@Override
 	public View getCardContent(View view) {
-        view = super.getCardContent(view);
 
 		if (region != null)
 			((TextView) view.findViewById(R.id.summonerRegion)).setText(region);

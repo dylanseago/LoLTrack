@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CardMatch extends CardGeneral {
+class CardMatch extends CardGeneral {
 	public CardMatch(ArrayList<ResourceValueMap> viewValueMap) {
 		super(R.layout.card_matches_game, viewValueMap);
 	}
@@ -21,7 +21,6 @@ public class CardMatch extends CardGeneral {
 			view.findViewById(R.id.card_content).setBackgroundResource(R.color.bgRed);
 			tv.setTextColor(view.getResources().getColor(R.color.statRed));
 		}
-
 		return view;
 	}
 }

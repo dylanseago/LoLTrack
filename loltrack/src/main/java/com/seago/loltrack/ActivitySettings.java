@@ -1,7 +1,6 @@
 package com.seago.loltrack;
 
 import android.app.Activity;
-import android.preference.PreferenceFragment;
 
 import android.os.Bundle;
 
@@ -13,7 +12,7 @@ public class ActivitySettings extends Activity {
 		super.onCreate(savedInstanceState);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		// Adds preference fragment to this activity
-		getFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
+		getFragmentManager().beginTransaction().replace(android.R.id.content, new FragmentSettings(R.xml.preferences)).commit();
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -25,14 +24,5 @@ public class ActivitySettings extends Activity {
 				return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	// Fragment containing preferences
-    private class SettingsFragment extends PreferenceFragment {
-		@Override
-		public void onCreate(final Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-			addPreferencesFromResource(R.xml.preferences);
-		}
 	}
 }

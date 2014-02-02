@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 public class FragmentProfile extends Fragment {
 
+    public FragmentProfile() {
+        super();
+    }
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// Inflates the layout

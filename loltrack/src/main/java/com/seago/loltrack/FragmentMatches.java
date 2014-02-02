@@ -8,7 +8,12 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-class FragmentMatches extends Fragment {
+public class FragmentMatches extends Fragment {
+
+    public FragmentMatches() {
+        super();
+    }
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
