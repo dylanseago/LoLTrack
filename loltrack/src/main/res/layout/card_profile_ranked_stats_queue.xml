@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/crest"
         android:gravity="center"
-        android:text="Unranked"
+        android:text="@string/default_ranking"
         android:textIsSelectable="false" />
 
     <!-- League points -->
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/league"
         android:gravity="center"
-        android:text="0 LP"
+        android:text="@string/default_lp"
         android:textIsSelectable="false" />
 
     <!-- Win/Loss -->
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/winsLabel"
+            android:text="@string/label_wins"
             android:textIsSelectable="false" />
 
         <TextView
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/winsLabel"
-            android:text="0"
+            android:text="@string/default_zero"
             android:textColor="@color/statGreen"
             android:textIsSelectable="false" />
 
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/wins"
-            android:text="@string/lossesLabel"
+            android:text="@string/label_losses"
             android:textIsSelectable="false" />
 
         <TextView
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/lossesLabel"
-            android:text="0"
+            android:text="@string/default_zero"
             android:textColor="@color/statRed"
             android:textIsSelectable="false" />
     </RelativeLayout>
@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/kdaLabel"
+            android:text="@string/label_kda"
             android:textIsSelectable="false" />
 
         <TextView
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/KDALabel"
-            android:text="0"
+            android:text="@string/default_zero"
             android:textColor="@color/statBlue"
             android:textIsSelectable="false" />
     </RelativeLayout>
@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/lastPlayedLabel"
             android:layout_centerHorizontal="true"
-            android:text="Never"
+            android:text="@string/default_lastPlayed"
             android:textColor="@color/statBlue"
             android:textIsSelectable="false" />
     </RelativeLayout>

@@ -4,7 +4,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-class CardSummonerTest extends LCard {
+import com.seago.loltrack.CardsUI.CardBase;
+
+class CardSummonerTest extends CardBase {
 
 	private SummonerInfoTest	info;
 

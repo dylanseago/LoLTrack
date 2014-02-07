@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textIsSelectable="true"
-            android:text="Summoner"/>
+            android:text="@string/default_summoner"/>
 
         <TextView
             android:id="@+id/summonerLevel"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/summonerName"
             android:textIsSelectable="false"
-            android:text="0"/>
+            android:text="@string/default_zero"/>
     </RelativeLayout>
 
 </RelativeLayout>

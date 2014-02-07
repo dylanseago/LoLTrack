@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="#"
+        android:text="@string/label_numberSign"
         android:textIsSelectable="false" />
 
     <com.seago.loltrack.fonts.RobotoLightTextView
@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Champion"
+        android:text="@string/label_championLabel"
         android:textIsSelectable="false" />
 
     <com.seago.loltrack.fonts.RobotoTextView
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Win %"
+        android:text="@string/label_winPercent"
         android:textIsSelectable="false" />
 
     <com.seago.loltrack.fonts.RobotoTextView
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Games"
+        android:text="@string/label_gamesNoColon"
         android:textIsSelectable="false" />
 
 </LinearLayout>

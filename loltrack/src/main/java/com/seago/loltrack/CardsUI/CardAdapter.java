@@ -3,35 +3,30 @@
  *
  * Custom Card View element
  */
-package com.seago.loltrack;
+package com.seago.loltrack.CardsUI;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Rect;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
-import android.view.TouchDelegate;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.afollestad.cardsui.Card;
-import com.afollestad.cardsui.CardBase;
 import com.afollestad.silk.adapters.SilkAdapter;
+import com.seago.loltrack.R;
 
-class LCardAdapter extends SilkAdapter<LCard> {
+public class CardAdapter extends SilkAdapter<CardBase> {
 
     private final int EMPTY_CARD = R.layout.card_empty;
     private final SparseIntArray mViewTypes;
-    private boolean mCardsClickable = true;
 
-    public LCardAdapter(Activity context) {
+    public CardAdapter(Activity context) {
         super(context);
         mViewTypes = new SparseIntArray();
         registerLayout(EMPTY_CARD);
     }
 
     @Override
-    public View onViewCreated(int index, View recycled, LCard item) {
+    public View onViewCreated(int index, View recycled, CardBase item) {
         recycled = item.getCardContent(recycled);
         invalidatePadding(index, recycled);
         return recycled;
@@ -59,47 +54,19 @@ class LCardAdapter extends SilkAdapter<LCard> {
         return onViewCreated(i, view, getItem(i));
     }
 
-    public void add(LCard toAdd){
+    public void add(CardBase toAdd){
         registerLayout(toAdd.getLayout());
         super.add(toAdd);
     }
 
-    public static void setupTouchDelegate(Context context, final View menu) {
-        final int offset = context.getResources().getDimensionPixelSize(com.afollestad.cardsui.R.dimen.card_action_touchdelegate);
-        assert menu.getParent() != null;
-        ((View) menu.getParent()).post(new Runnable() {
-            public void run() {
-                Rect delegateArea = new Rect();
-                menu.getHitRect(delegateArea);
-                delegateArea.top -= offset;
-                delegateArea.bottom += offset;
-                delegateArea.left -= offset;
-                delegateArea.right += offset;
-                TouchDelegate expandedArea = new TouchDelegate(delegateArea, menu);
-                ((View) menu.getParent()).setTouchDelegate(expandedArea);
-            }
-        });
-    }
-
     @Override
     public final boolean isEnabled(int position) {
-        LCard item = getItem(position);
-        return mCardsClickable && item.isClickable();
-    }
-
-    /**
-     * Sets whether or not cards in the adapter are clickable, setting it to false will turn card's list selectors off
-     * and the list's OnItemClickListener will not be called. This <b>will</b> override individual isClickable values
-     * set to {@link Card}s.
-     */
-    public final LCardAdapter setCardsClickable(boolean clickable) {
-        mCardsClickable = clickable;
-        return this;
+        return getItem(position).isClickable();
     }
 
     private void invalidatePadding(int index, View view) {
-        int top = index == 0 ? com.afollestad.cardsui.R.dimen.card_outer_padding_firstlast : com.afollestad.cardsui.R.dimen.card_outer_padding_top;
-        int bottom = index == (getCount() - 1) ? com.afollestad.cardsui.R.dimen.card_outer_padding_firstlast : com.afollestad.cardsui.R.dimen.card_outer_padding_bottom;
+        int top = index == 0 ? R.dimen.card_outer_padding_firstlast : R.dimen.card_outer_padding_top;
+        int bottom = index == (getCount() - 1) ? R.dimen.card_outer_padding_firstlast : R.dimen.card_outer_padding_bottom;
         view.setPadding(view.getPaddingLeft(),
                 getContext().getResources().getDimensionPixelSize(top),
                 view.getPaddingRight(),
@@ -107,7 +74,7 @@ class LCardAdapter extends SilkAdapter<LCard> {
     }
 
     @Override
-    public Object getItemId(LCard item) {
+    public Object getItemId(CardBase item) {
         return item.getSilkId();
     }
 
@@ -116,7 +83,7 @@ class LCardAdapter extends SilkAdapter<LCard> {
      * <p/>
      * This must be used if you override getLayout() and specify custom layouts for certain list items.
      */
-    public final LCardAdapter registerLayout(int layoutRes) {
+    public final CardAdapter registerLayout(int layoutRes) {
         if(mViewTypes.get(layoutRes, -1) == -1) {
             mViewTypes.put(layoutRes, mViewTypes.size());
         }

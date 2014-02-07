@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.seago.loltrack.LCardListView
+<com.seago.loltrack.CardsUI.CardListView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardListView"
     android:layout_width="fill_parent"

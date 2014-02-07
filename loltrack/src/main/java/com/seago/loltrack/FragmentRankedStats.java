@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.seago.loltrack.CardsUI.CardAdapter;
+import com.seago.loltrack.CardsUI.CardListView;
+
 import java.util.ArrayList;
 
 public class FragmentRankedStats extends Fragment {
@@ -19,7 +22,7 @@ public class FragmentRankedStats extends Fragment {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_ranked_stats, container, false);
 
-		LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
+		CardAdapter cardAdapter = new CardAdapter(this.getActivity());
 		cardAdapter.add(new CardStatsHeader());
 
 		ArrayList<ChampionValueMap> championValueMap = new ArrayList<ChampionValueMap>();
@@ -40,7 +43,7 @@ public class FragmentRankedStats extends Fragment {
 
 		cardAdapter.add(new CardChampionList(championValueMap));
 
-        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
+        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
         cardListView.setItemsCanFocus(true);
 

@@ -3,7 +3,9 @@ package com.seago.loltrack;
 import android.view.View;
 import android.widget.EditText;
 
-class CardStatsHeader extends LCard {
+import com.seago.loltrack.CardsUI.CardBase;
+
+class CardStatsHeader extends CardBase {
     public CardStatsHeader(){
         super(R.layout.card_stats_header);
     }

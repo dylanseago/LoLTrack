@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:textIsSelectable="true"
-                android:text="Summoner"/>
+                android:text="@string/default_summoner"/>
 
             <TextView
                 android:id="@+id/summonerLevel"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/summonerName"
                 android:textIsSelectable="false"
-                android:text="0"/>
+                android:text="@string/default_zero"/>
         </RelativeLayout>
 
         <TextView
@@ -58,7 +58,7 @@
             android:textIsSelectable="false"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:text="REGION"/>
+            android:text="@string/default_region"/>
     </RelativeLayout>
 
     <View
@@ -117,7 +117,7 @@
                 android:layout_centerInParent="true"
                 android:paddingTop="10dp"
                 android:textIsSelectable="false"
-                android:text="Unranked"/>
+                android:text="@string/default_ranking"/>
 
             <TextView
                 android:id="@+id/topRankingLP"
@@ -127,7 +127,7 @@
                 android:layout_below="@+id/topRanking"
                 android:layout_centerInParent="true"
                 android:textIsSelectable="false"
-                android:text="0 LP"/>
+                android:text="@string/default_lp"/>
 
             <!-- Wins/Losses for top ranking -->
 
@@ -144,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/winsLabel"
+                    android:text="@string/label_wins"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -155,7 +155,7 @@
                     android:layout_toRightOf="@+id/topRankingWinsLabel"
                     android:textColor="@color/statGreen"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_zero"/>
 
                 <TextView
                     android:id="@+id/topRankingLossesLabel"
@@ -163,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topRankingWins"
-                    android:text="@string/lossesLabel"
+                    android:text="@string/label_losses"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -174,7 +174,7 @@
                     android:layout_toRightOf="@+id/topRankingLossesLabel"
                     android:textColor="@color/statRed"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_zero"/>
             </RelativeLayout>
 
             <!-- KDA for top ranking -->
@@ -192,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/kdaLabel"
+                    android:text="@string/label_kda"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -203,7 +203,7 @@
                     android:layout_toRightOf="@+id/topRankingKDALabel"
                     android:textColor="@color/statBlue"
                     android:textIsSelectable="false"
-                    android:text="0/0/0"/>
+                    android:text="@string/default_kda"/>
             </RelativeLayout>
         </RelativeLayout>
 
@@ -249,7 +249,7 @@
                 android:layout_centerInParent="true"
                 android:paddingTop="10dp"
                 android:textIsSelectable="false"
-                android:text="Unknown"/>
+                android:text="@string/default_ranking"/>
 
             <RelativeLayout
                 android:id="@+id/topChampionGamesLayout"
@@ -275,7 +275,7 @@
                     android:layout_toRightOf="@+id/topChampionGamesLabel"
                     android:textColor="@color/statBlue"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_zero"/>
             </RelativeLayout>
 
             <!-- Wins/Losses for top champion -->
@@ -294,7 +294,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/winsLabel"
+                    android:text="@string/label_wins"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -305,7 +305,7 @@
                     android:layout_toRightOf="@+id/topChampionWinsLabel"
                     android:textColor="@color/statGreen"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_zero"/>
 
                 <TextView
                     android:id="@+id/topChampionLossesLabel"
@@ -313,7 +313,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionWins"
-                    android:text="@string/lossesLabel"
+                    android:text="@string/label_losses"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -324,7 +324,7 @@
                     android:layout_toRightOf="@+id/topChampionLossesLabel"
                     android:textColor="@color/statRed"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_zero"/>
             </RelativeLayout>
 
             <!-- KDA for Top Champion -->
@@ -342,7 +342,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/kdaLabel"
+                    android:text="@string/label_kda"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -353,7 +353,7 @@
                     android:layout_toRightOf="@+id/topChampionKDALabel"
                     android:textColor="@color/statBlue"
                     android:textIsSelectable="false"
-                    android:text="0"/>
+                    android:text="@string/default_kda"/>
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -394,7 +394,7 @@
             android:layout_toRightOf="@+id/normalWinsLabel"
             android:textColor="@color/statGreen"
             android:textIsSelectable="false"
-            android:text="0"/>
+            android:text="@string/default_zero"/>
     </RelativeLayout>
 
     <!--

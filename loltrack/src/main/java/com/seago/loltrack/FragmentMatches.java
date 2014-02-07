@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.seago.loltrack.CardsUI.CardAdapter;
+import com.seago.loltrack.CardsUI.CardListView;
+
 import java.util.ArrayList;
 
 public class FragmentMatches extends Fragment {
@@ -19,7 +22,7 @@ public class FragmentMatches extends Fragment {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_matches, container, false);
 
-        LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
+        CardAdapter cardAdapter = new CardAdapter(this.getActivity());
 
 		ArrayList<ResourceValueMap> rvm = new ArrayList<ResourceValueMap>();
 
@@ -77,7 +80,7 @@ public class FragmentMatches extends Fragment {
 		rvm.add(new ResourceValueMap(null, R.id.minions, "125"));
         cardAdapter.add(new CardMatch(rvm));
 
-        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
+        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
 		return view;

@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.seago.loltrack.CardsUI.CardAdapter;
+import com.seago.loltrack.CardsUI.CardListView;
+
 import java.util.ArrayList;
 
 public class FragmentProfile extends Fragment {
@@ -19,8 +22,7 @@ public class FragmentProfile extends Fragment {
 		// Inflates the layout
 		View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        LCardAdapter cardAdapter = new LCardAdapter(this.getActivity());
-        cardAdapter.setCardsClickable(false);
+        CardAdapter cardAdapter = new CardAdapter(this.getActivity());
 
 		// Sets the values for the header card
 		{
@@ -159,7 +161,7 @@ public class FragmentProfile extends Fragment {
 
 		}
 
-        LCardListView cardListView = (LCardListView) view.findViewById(R.id.cardListView);
+        CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
 		return view;

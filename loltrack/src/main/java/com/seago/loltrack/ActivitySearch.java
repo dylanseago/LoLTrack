@@ -13,7 +13,10 @@ import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
-import com.seago.loltrack.statRetriever.ErrorCard;
+import com.seago.loltrack.CardsUI.CardAdapter;
+import com.seago.loltrack.CardsUI.CardBase;
+import com.seago.loltrack.CardsUI.CardListView;
+import com.seago.loltrack.statRetriever.ErrorCardBase;
 import com.seago.loltrack.statRetriever.ErrorStat;
 import com.seago.loltrack.statRetriever.Player;
 import com.seago.loltrack.statRetriever.statLeagues.Leagues;
@@ -34,7 +37,7 @@ import java.util.ArrayList;
 
 public class ActivitySearch extends ActivityBase {
     private static final String DTAG = "SearchActivity";
-    private LCardAdapter searchResultsAdapter;
+    private CardAdapter searchResultsAdapter;
     private ProgressBar progressBar;
     private boolean searchNA;
     private boolean searchEUW;
@@ -94,8 +97,8 @@ public class ActivitySearch extends ActivityBase {
     // Handles this activities intent
     private void handleIntent(Intent intent) {
         // init CardView
-        searchResultsAdapter = new LCardAdapter(this);
-        ((LCardListView) findViewById(R.id.cardListView)).setAdapter(searchResultsAdapter);
+        searchResultsAdapter = new CardAdapter(this);
+        ((CardListView) findViewById(R.id.cardListView)).setAdapter(searchResultsAdapter);
 
         getPreferences();
 
@@ -111,10 +114,10 @@ public class ActivitySearch extends ActivityBase {
     void doSummonerSearch(String query) {
         // TODO Remove after done testing
         SummonerInfoTest info1 = new SummonerInfoTest("NA");
-        LCard c1 = new CardSummonerTest(info1);
+        CardBase c1 = new CardSummonerTest(info1);
         c1.setOnClickListener(new CardOnClickListenerTest());
         SummonerInfoTest info2 = new SummonerInfoTest("EU");
-        LCard c2 = new CardSummonerTest(info2);
+        CardBase c2 = new CardSummonerTest(info2);
         c2.setOnClickListener(new CardOnClickListenerTest());
 
         searchResultsAdapter.add(c1);
@@ -146,11 +149,11 @@ public class ActivitySearch extends ActivityBase {
     // Reports a specified error visually and in the logs
     public void throwErrorCard(String message) {
         Log.e(DTAG, message);
-        searchResultsAdapter.add(new ErrorCard(new ErrorStat(message)));
+        searchResultsAdapter.add(new ErrorCardBase(new ErrorStat(message)));
     }
 
     // In the background retrieves the URL for specified resource and converts the JSON into an object and displays the result
-    public class StatRetriever extends AsyncTask<String, Integer, ArrayList<LCard>> {
+    public class StatRetriever extends AsyncTask<String, Integer, ArrayList<CardBase>> {
         private Gson gson = new Gson();
         private String query;
 
@@ -162,9 +165,9 @@ public class ActivitySearch extends ActivityBase {
 
         // When the AsyncTask begins its operation
         @Override
-        protected ArrayList<LCard> doInBackground(String... query) {
+        protected ArrayList<CardBase> doInBackground(String... query) {
             this.query = urlEncode(query[0]);
-            ArrayList<LCard> result = new ArrayList<LCard>();
+            ArrayList<CardBase> result = new ArrayList<CardBase>();
 
             // Checks if the preference has been enabled for searching in the specified region then adds the card for that region to the CardUI
             if (searchNA)
@@ -181,15 +184,15 @@ public class ActivitySearch extends ActivityBase {
 
         // After the AsyncTask has completed its operation
         @Override
-        protected void onPostExecute(ArrayList<LCard> res) {
-            for (LCard re : res) {
+        protected void onPostExecute(ArrayList<CardBase> res) {
+            for (CardBase re : res) {
                 searchResultsAdapter.add(re);
             }
             progressBar.setVisibility(View.GONE);
         }
 
         // Gets the statistics for search query and specified region
-        private LCard getSummonerCard(String region) {
+        private CardBase getSummonerCard(String region) {
             Summoner summoner;
             Player_stats player_stats;
             Ranked_stats ranked_stats;
@@ -205,7 +208,7 @@ public class ActivitySearch extends ActivityBase {
 
                 // Checks to see if specified summoner exists, if not, return an error
                 if (!summoner.getSuccess())
-                    return new ErrorCard(new ErrorStat(region, summoner.getError()));
+                    return new ErrorCardBase(new ErrorStat(region, summoner.getError()));
 
                 // Gets Player_stats using resSummoner.SummonerId
                 String urlPlayer_stats = "http://api.elophant.com/v2/" + region + "/player_stats/" + summoner.getData().getAcctId() + "?key=" + Utils.API_KEY;
@@ -228,9 +231,9 @@ public class ActivitySearch extends ActivityBase {
                 summoner_team_info = gson.fromJson(jsonSummoner_team_info, Summoner_team_info.class);
 
             } catch (IOException e) {
-                return new ErrorCard(new ErrorStat("Unable to retrieve stats. Server may be offline."));
+                return new ErrorCardBase(new ErrorStat("Unable to retrieve stats. Server may be offline."));
             } catch (Exception e) {
-                return new ErrorCard(new ErrorStat("Unknown error retrieving stats."));
+                return new ErrorCardBase(new ErrorStat("Unknown error retrieving stats."));
             }
 
             // Converts statistics to a player object
@@ -243,7 +246,7 @@ public class ActivitySearch extends ActivityBase {
 
             // Passes the player into a SummonerCardInfo object which gathers the required stats from the json objects to be easily displayed on a card
             SummonerInfo info = new SummonerInfo(player);
-            LCard c = new CardSummoner(info);
+            CardBase c = new CardSummoner(info);
             c.setOnClickListener(new CardOnClickListener(player));
 
             return c;

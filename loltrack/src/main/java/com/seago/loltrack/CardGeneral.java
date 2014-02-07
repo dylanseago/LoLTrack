@@ -5,9 +5,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.seago.loltrack.CardsUI.CardBase;
+
 import java.util.ArrayList;
 
-class CardGeneral extends LCard {
+class CardGeneral extends CardBase {
 	private static final String			DTAG	= "CardGeneral";
 	private ArrayList<ResourceValueMap>	viewValueMap;
 

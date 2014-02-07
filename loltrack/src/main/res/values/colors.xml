@@ -14,4 +14,7 @@
     <color name="bgRed">#EACDCF</color>
     <color name="bgGreen">#D8EBDA</color>
 
+    <color name="card_pressed">#ebebeb</color>
+    <color name="card_gray">#e5e5e5</color>
+
 </resources>

@@ -6,7 +6,7 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-class RobotoBoldTextView extends TextView {
+public class RobotoBoldTextView extends TextView {
 
 	public RobotoBoldTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);

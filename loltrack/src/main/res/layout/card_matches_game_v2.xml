@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Victory"
+            android:text="@string/default_outcome"
             android:textColor="@color/statGreen" />
 
         <com.seago.loltrack.fonts.RobotoLightTextView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/outcome"
             android:layout_centerHorizontal="true"
-            android:text="Normal 5v5" />
+            android:text="@string/default_gameMode" />
 
         <TextView
             android:id="@+id/length"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/mode"
             android:layout_centerHorizontal="true"
-            android:text="30 mins long" />
+            android:text="@string/default_length" />
 
         <TextView
             android:id="@+id/timeSince"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/length"
             android:layout_centerHorizontal="true"
-            android:text="18 mins ago" />
+            android:text="@string/default_timeSince" />
     </RelativeLayout>
 
     <LinearLayout
@@ -73,7 +73,7 @@
                 android:maxHeight="42dp"
                 android:maxWidth="42dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/champion_icon_annie" />
+                android:src="@drawable/icon_unknown" />
 
             <RelativeLayout
                 android:id="@+id/spellLayout"
@@ -91,7 +91,7 @@
                     android:layout_marginBottom="2dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Summoner Spell 1"
+                    android:contentDescription="@string/contentDescription_spell1"
                     android:maxHeight="20dp"
                     android:maxWidth="20dp"
                     android:scaleType="centerInside"
@@ -104,7 +104,7 @@
                     android:layout_below="@+id/spell1"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Summoner Spell 2"
+                    android:contentDescription="@string/contentDescription_spell2"
                     android:maxHeight="20dp"
                     android:maxWidth="20dp"
                     android:scaleType="centerInside"
@@ -126,7 +126,7 @@
                     android:layout_margin="1dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 1"
+                    android:contentDescription="@string/contentDescription_item1"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -141,7 +141,7 @@
                     android:layout_toRightOf="@+id/item1"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 2"
+                    android:contentDescription="@string/contentDescription_item2"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -156,7 +156,7 @@
                     android:layout_toRightOf="@+id/item2"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 3"
+                    android:contentDescription="@string/contentDescription_item3"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -170,7 +170,7 @@
                     android:layout_margin="1dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 4"
+                    android:contentDescription="@string/contentDescription_item4"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -185,7 +185,7 @@
                     android:layout_toRightOf="@+id/item4"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 5"
+                    android:contentDescription="@string/contentDescription_item5"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -200,7 +200,7 @@
                     android:layout_toRightOf="@+id/item5"
                     android:adjustViewBounds="true"
                     android:background="@drawable/summoner_icon"
-                    android:contentDescription="Item 6"
+                    android:contentDescription="@string/contentDescription_item6"
                     android:maxHeight="18dp"
                     android:maxWidth="18dp"
                     android:scaleType="centerInside"
@@ -228,7 +228,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="11/5/8" />
+                    android:text="@string/default_kda" />
 
                 <TextView
                     android:id="@+id/kdaLabel"
@@ -237,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/kda"
                     android:layout_centerHorizontal="true"
-                    android:text="KDA" />
+                    android:text="@string/label_kdaNoColon" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -252,7 +252,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="11.2k" />
+                    android:text="@string/default_gold" />
 
                 <TextView
                     android:id="@+id/goldLabel"
@@ -261,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gold"
                     android:layout_centerHorizontal="true"
-                    android:text="Gold" />
+                    android:text="@string/label_gold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -276,7 +276,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="168" />
+                    android:text="@string/default_zero" />
 
                 <TextView
                     android:id="@+id/minionsLabel"
@@ -285,7 +285,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/minions"
                     android:layout_centerHorizontal="true"
-                    android:text="Minions" />
+                    android:text="@string/label_minions" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

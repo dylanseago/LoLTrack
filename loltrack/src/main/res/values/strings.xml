@@ -3,34 +3,39 @@
 
     <string name="app_name">LoLTrack</string>
     <string name="app_id">com.seago.loltrack</string>
+    <string name="bannerSubtitle">League of Legends Player Stats</string>
+
     <string name="menu_settings">Settings</string>
     <string name="menu_about">About</string>
     <string name="menu_search">Search</string>
+
     <string name="title_search">Search</string>
-    <string name="title_activity_search">SearchActivity</string>
-    <string name="menu_search_hint">Search a Summoner</string>
     <string name="title_results">Results</string>
+
     <string name="hint_search">Search a Summoner</string>
     <string name="hint_searchRankedStats">Search a Champion</string>
+
+    <string name="contentDescription_banner">LOLTrack Banner</string>
     <string name="contentDescription_summonerIcon">Summoner Icon</string>
     <string name="contentDescription_championIcon">Champion Icon</string>
     <string name="contentDescription_topRankingImage">Top Ranking Crest</string>
     <string name="contentDescription_topChampionImage">Top Champion Icon</string>
-    <string name="label_topRanking">Top Ranking</string>
-    <string name="label_topChampion">Top Champion</string>
-    <string name="winsLabel">"W: "</string>
-    <string name="winsLabelFull">"Wins: "</string>
-    <string name="killsLabel">"Kills: "</string>
-    <string name="lossesLabel">"  L: "</string>
-    <string name="kdaLabel">"KDA: "</string>
-    <string name="label_normalWins">"Normal Wins: "</string>
-    <string name="label_games">"Games: "</string>
-    <string name="label_timePlayed">"Time Played:"</string>
-    <string name="label_lastPlayed">"Last Played:"</string>
-    <string name="label_sharedUser">LoLTrack</string>
-    <string name="contentDescription_banner">LOLTrack Banner</string>
-    <string name="bull">•</string>
-    <string name="bannerSubtitle">League of Legends Player Stats</string>
+    <string name="contentDescription_item6">Item 6</string>
+    <string name="contentDescription_item5">Item 5</string>
+    <string name="contentDescription_item4">Item 4</string>
+    <string name="contentDescription_item3">Item 3</string>
+    <string name="contentDescription_item2">Item 2</string>
+    <string name="contentDescription_item1">Item 1</string>
+    <string name="contentDescription_spell2">Summoner Spell 2</string>
+    <string name="contentDescription_spell1">Summoner Spell 1</string>
+
+    <string name="temp_ranked_stats">Ranked stats</string>
+    <string name="temp_leagues">Leagues</string>
+    <string name="temp_runes">Runes</string>
+    <string name="temp_masterys">Masteries</string>
+    <string name="temp_matches">Matches</string>
+    <string name="temp_comingSoon">Coming Soon</string>
+
     <string name="comingSoonHeader">Coming Soon</string>
     <string name="comingSoonEntry1">"•  Full Ranked Stats"</string>
     <string name="comingSoonEntry2">"•  Full Summoner League Stats"</string>
@@ -39,6 +44,7 @@
     <string name="comingSoonEntry5">"•  Team Stats"</string>
     <string name="comingSoonEntry6">"•  Team History"</string>
     <string name="comingSoonEntry7">"•  Current Game Info"</string>
+
     <string name="settings_activityTitle">Settings</string>
     <string name="settings_searchResultsHeading">Search Results</string>
     <string name="settings_searchNA">NA Server</string>
@@ -49,39 +55,59 @@
     <string name="settings_searchEUNE_summ">Show search results for the EUNE Server</string>
     <string name="settings_searchBR">BR Server</string>
     <string name="settings_searchBR_summ">Show search results for the BR Server</string>
+
     <string name="about_activityTitle">About</string>
     <string name="about_developer">Developer</string>
     <string name="about_developer_summ">Dylan Seago</string>
     <string name="about_poweredBy">Powered by</string>
     <string name="about_poweredBy_summ">Riot Games API</string>
     <string name="about_riotGames_summ">League of Legends is a registered trademark of Riot Games Inc.</string>
-    <string name="temp_ranked_stats">Ranked stats</string>
-    <string name="temp_leagues">Leagues</string>
-    <string name="temp_runes">Runes</string>
-    <string name="temp_masterys">Masteries</string>
-    <string name="temp_matches">Matches</string>
-    <string name="temp_comingSoon">Coming Soon</string>
+
     <string name="header_normalStats">Normal Stats</string>
     <string name="header_rankedStats">Ranked Stats</string>
     <string name="header_topChampions">Top Champions</string>
     <string name="header_winPercent">Win %</string>
     <string name="header_games">Games</string>
+
+    <string name="label_wins">"W: "</string>
+    <string name="label_winsFull">"Wins: "</string>
+    <string name="label_kills">"Kills: "</string>
+    <string name="label_losses">"  L: "</string>
+    <string name="label_kda">"KDA: "</string>
+    <string name="label_normalWins">"Normal Wins: "</string>
+    <string name="label_games">"Games: "</string>
+    <string name="label_timePlayed">"Time Played:"</string>
+    <string name="label_lastPlayed">"Last Played:"</string>
+    <string name="label_sharedUser">LoLTrack</string>
+    <string name="label_topRanking">Top Ranking</string>
+    <string name="label_topChampion">Top Champion</string>
     <string name="label_minions">Minions</string>
     <string name="label_gold">Gold</string>
-    <string name="label_kda">KDA</string>
-    <string name="contentDescription_item6">Item 6</string>
-    <string name="contentDescription_item5">Item 5</string>
-    <string name="contentDescription_item4">Item 4</string>
-    <string name="contentDescription_item3">Item 3</string>
-    <string name="contentDescription_item2">Item 2</string>
-    <string name="contentDescription_item1">Item 1</string>
-    <string name="contentDescription_spell2">Summoner Spell 2</string>
-    <string name="contentDescription_spell1">Summoner Spell 1</string>
+    <string name="label_kdaNoColon">KDA</string>
     <string name="label_gameLength">Length</string>
     <string name="label_season4">Season 4</string>
     <string name="label_season3">Season 3</string>
     <string name="label_season2">Season 2</string>
     <string name="label_season1">Season 1</string>
+    <string name="label_numberSign">#</string>
+    <string name="label_championLabel">Champion</string>
+    <string name="label_winPercent">Win %</string>
+    <string name="label_gamesNoColon">Games</string>
+
+    <string name="default_summoner">Summoner</string>
+    <string name="default_zero">0</string>
+    <string name="default_championName">ChampionName</string>
+    <string name="default_zeroPercent">0%</string>
+    <string name="default_ranking">Unranked</string>
+    <string name="default_lp">0 LP</string>
+    <string name="default_lastPlayed">Never</string>
+    <string name="default_outcome">Outcome</string>
+    <string name="default_gameMode">Game Mode</string>
+    <string name="default_timeSince">0 days ago</string>
+    <string name="default_length">00:00</string>
+    <string name="default_kda">0/0/0</string>
+    <string name="default_gold">0k</string>
+    <string name="default_region">REGION</string>
 
     <string-array name="championRolesArray">
         <item name="all_roles">All Roles</item>

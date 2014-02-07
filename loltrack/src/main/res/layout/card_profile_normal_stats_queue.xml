@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/winsLabelFull"
+            android:text="@string/label_winsFull"
             android:textIsSelectable="false" />
 
         <TextView
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/winsLabel"
-            android:text="0"
+            android:text="@string/default_zero"
             android:textColor="@color/statGreen"
             android:textIsSelectable="false" />
     </RelativeLayout>
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/killsLabel"
+            android:text="@string/label_kills"
             android:textIsSelectable="false" />
 
         <TextView
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/killsLabel"
-            android:text="0"
+            android:text="@string/default_zero"
             android:textColor="@color/statGreen"
             android:textIsSelectable="false" />
     </RelativeLayout>
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lastPlayedLabel"
-            android:text="Never"
+            android:text="@string/default_lastPlayed"
             android:textColor="@color/statBlue"
             android:textIsSelectable="false" 
             android:layout_centerHorizontal="true"/>

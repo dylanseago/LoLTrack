@@ -3,15 +3,15 @@ package com.seago.loltrack.statRetriever;
 import android.view.View;
 import android.widget.TextView;
 
-import com.seago.loltrack.LCard;
+import com.seago.loltrack.CardsUI.CardBase;
 import com.seago.loltrack.R;
 
-public class ErrorCard extends LCard {
+public class ErrorCardBase extends CardBase {
 	private boolean	success;
 	private String	region;
     private String error;
 
-	public ErrorCard(ErrorStat es) {
+	public ErrorCardBase(ErrorStat es) {
 		super(R.layout.card_summoner_search);
 		this.success = es.getSuccess();
 		this.region = es.getRegion();

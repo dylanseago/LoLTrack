@@ -6,9 +6,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.seago.loltrack.CardsUI.CardBase;
+
 import java.util.ArrayList;
 
-class CardChampionList extends LCard {
+class CardChampionList extends CardBase {
 	private ArrayList<ChampionValueMap>	championValueMap;
 	private ArrayList<ChampionValueMap>	championValueMapSorted;
 
