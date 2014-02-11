@@ -44,7 +44,7 @@ public class ErrorCardBase extends CardBase {
 		view.findViewById(R.id.underlineOne).setVisibility(View.GONE);
 
 		view.findViewById(R.id.topRankingTitle).setVisibility(View.GONE);
-		view.findViewById(R.id.topRankingImage).setVisibility(View.GONE);
+		view.findViewById(R.id.topRankingCrest).setVisibility(View.GONE);
 		view.findViewById(R.id.topRanking).setVisibility(View.GONE);
 		view.findViewById(R.id.topRankingLP).setVisibility(View.GONE);
 		view.findViewById(R.id.topRankingWinsLabel).setVisibility(View.GONE);

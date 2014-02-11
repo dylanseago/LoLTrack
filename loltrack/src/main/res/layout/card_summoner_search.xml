@@ -96,7 +96,7 @@
                 android:textIsSelectable="false" />
 
             <ImageView
-                android:id="@+id/topRankingImage"
+                android:id="@+id/topRankingCrest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/topRankingTitle"
@@ -113,7 +113,7 @@
                 style="@style/CardHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/topRankingImage"
+                android:layout_below="@+id/topRankingCrest"
                 android:layout_centerInParent="true"
                 android:paddingTop="10dp"
                 android:textIsSelectable="false"

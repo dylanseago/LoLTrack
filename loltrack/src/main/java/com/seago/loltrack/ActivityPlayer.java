@@ -11,7 +11,7 @@ public class ActivityPlayer extends ActivityBase {
     private static final String DTAG = "PlayerActivity";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         Log.v("PlayerActivity", "PlayerActivity OnCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);

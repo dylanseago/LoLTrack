@@ -32,7 +32,7 @@ class CardSummonerTest extends CardBase {
 
 		// Sets summmoners leagues stats if given
 		if (info.topRanking != null) {
-			((ImageView) view.findViewById(R.id.topRankingImage)).setImageResource(Utils.getDrawableResource("crest_" + info.topRanking));
+			((ImageView) view.findViewById(R.id.topRankingCrest)).setImageResource(Utils.getDrawableResource("crest_" + info.topRanking));
 			((TextView) view.findViewById(R.id.topRanking)).setText(info.topRanking);
 			((TextView) view.findViewById(R.id.topRankingWins)).setText(Integer.toString(info.topRankingWins));
 			((TextView) view.findViewById(R.id.topRankingLosses)).setText(Integer.toString(info.topRankingLosses));
@@ -41,7 +41,7 @@ class CardSummonerTest extends CardBase {
 		}
 		// Hides summoners leagues if not given
 		else {
-			((ImageView) view.findViewById(R.id.topRankingImage)).setImageResource(Utils.getDrawableResource("crest_unranked"));
+			((ImageView) view.findViewById(R.id.topRankingCrest)).setImageResource(Utils.getDrawableResource("crest_unranked"));
 			((TextView) view.findViewById(R.id.topRanking)).setText("Unranked");
 
 			view.findViewById(R.id.topRankingWinsLabel).setVisibility(View.GONE);

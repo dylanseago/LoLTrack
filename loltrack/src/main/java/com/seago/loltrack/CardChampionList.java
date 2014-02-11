@@ -15,7 +15,7 @@ class CardChampionList extends CardBase {
 	private ArrayList<ChampionValueMap>	championValueMapSorted;
 
 	public CardChampionList(ArrayList<ChampionValueMap> championValueMap) {
-        super(R.layout.card_stats_champion_list);
+        super(R.layout.card_stats_list);
 		this.championValueMap = championValueMap;
 		this.championValueMapSorted = championValueMap;
 	}
@@ -23,12 +23,12 @@ class CardChampionList extends CardBase {
 	@Override
 	public View getCardContent(View view) {
 		LinearLayout tlView = (LinearLayout) view.findViewById(R.id.card_content);
-		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_champion_list_header, null));
+		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_list_header, null));
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
 
         for (ChampionValueMap aChampionValueMapSorted : championValueMapSorted) {
-            LinearLayout trView = (LinearLayout) LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_champion_list_row, null);
+            LinearLayout trView = (LinearLayout) LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_list_row, null);
 
             if (aChampionValueMapSorted.get("standing") != null)
                 ((TextView) trView.findViewById(R.id.standing)).setText(aChampionValueMapSorted.get("standing"));

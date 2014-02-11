@@ -6,22 +6,22 @@
 package com.seago.loltrack.CardsUI;
 
 import android.view.View;
-import android.view.View.OnClickListener;
+import com.seago.loltrack.CardsUI.CardListView.CardClickListener;
 
 import com.afollestad.silk.caching.SilkComparable;
 
 public abstract class CardBase implements SilkComparable<CardBase> {
 
     private int contentLayout;
-    private OnClickListener onClickListener = null;
+    private CardClickListener cardClickListener = null;
 
-    protected CardBase(int contentLayout) {
+    public CardBase(int contentLayout) {
         this.contentLayout = contentLayout;
     }
 
-    protected CardBase(int contentLayout, OnClickListener onClickListener) {
+    public CardBase(int contentLayout, CardClickListener cardClickListener) {
         this(contentLayout);
-        this.onClickListener = onClickListener;
+        this.cardClickListener = cardClickListener;
     }
 
     /**
@@ -36,20 +36,20 @@ public abstract class CardBase implements SilkComparable<CardBase> {
         return contentLayout;
     }
 
-    public OnClickListener getOnClickListener() {
-        return this.onClickListener;
+    public CardClickListener getCardClickListener() {
+        return this.cardClickListener;
     }
 
     /**
-     * Sets the onClickListener for this card.
+     * Sets the cardClickListener for this card.
      */
-    public CardBase setOnClickListener(OnClickListener onClickListener) {
-        this.onClickListener = onClickListener;
+    public CardBase setCardClickListener(CardClickListener cardClickListener) {
+        this.cardClickListener = cardClickListener;
         return this;
     }
 
     public boolean isClickable() {
-        return onClickListener != null;
+        return cardClickListener != null;
     }
 
     @Override

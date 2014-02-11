@@ -45,7 +45,7 @@ public class ActivitySearch extends ActivityBase {
     private boolean searchBR;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
@@ -59,7 +59,7 @@ public class ActivitySearch extends ActivityBase {
     }
 
     @Override
-    protected void onNewIntent(Intent intent) {
+    public void onNewIntent(Intent intent) {
         setIntent(intent);
         handleIntent(intent);
     }
@@ -115,10 +115,10 @@ public class ActivitySearch extends ActivityBase {
         // TODO Remove after done testing
         SummonerInfoTest info1 = new SummonerInfoTest("NA");
         CardBase c1 = new CardSummonerTest(info1);
-        c1.setOnClickListener(new CardOnClickListenerTest());
+        c1.setCardClickListener(new CardSearchClickListener());
         SummonerInfoTest info2 = new SummonerInfoTest("EU");
         CardBase c2 = new CardSummonerTest(info2);
-        c2.setOnClickListener(new CardOnClickListenerTest());
+        c2.setCardClickListener(new CardSearchClickListener());
 
         searchResultsAdapter.add(c1);
         searchResultsAdapter.add(c2);
@@ -247,7 +247,7 @@ public class ActivitySearch extends ActivityBase {
             // Passes the player into a SummonerCardInfo object which gathers the required stats from the json objects to be easily displayed on a card
             SummonerInfo info = new SummonerInfo(player);
             CardBase c = new CardSummoner(info);
-            c.setOnClickListener(new CardOnClickListener(player));
+            c.setCardClickListener(new CardSearchClickListener(player));
 
             return c;
         }
@@ -332,11 +332,21 @@ public class ActivitySearch extends ActivityBase {
         }
     }
 
-    private class CardOnClickListenerTest implements OnClickListener {
+    private class CardSearchClickListener implements CardListView.CardClickListener {
+
+        private Player player;
+
+        public CardSearchClickListener() {
+            super();
+        }
+
+        public CardSearchClickListener(Player player) {
+            this.player = player;
+        }
 
         @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(v.getContext(), ActivityPlayer.class);
+        public void onClick(int index, CardBase card, View view) {
+            Intent intent = new Intent(view.getContext(), ActivityPlayer.class);
             // Serializes the player object to be passed as a string
 			/*Log.v("CardOnClickListener", "Converting and Adding Json");
 			String s = new Gson().toJson(player).toString();
@@ -344,7 +354,7 @@ public class ActivitySearch extends ActivityBase {
 			Log.v("CardOnClickListener", "Part of StringExtra: " + s.substring(0, 256));
 			Log.v("CardOnClickListener", "Length of StringExtra: " + s.length());*/
             Log.v("CardOnClickListener", "Starting activity");
-            v.getContext().startActivity(intent);
+            view.getContext().startActivity(intent);
         }
     }
 }
