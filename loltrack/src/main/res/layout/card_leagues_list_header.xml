@@ -12,7 +12,6 @@
         style="@style/CardStat"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/header_numberSign"
         android:textIsSelectable="false" />
@@ -22,7 +21,6 @@
         style="@style/CardStat"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:gravity="center"
         android:text="%"
         android:textIsSelectable="false" />
@@ -33,7 +31,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:text="@string/header_summoner"
         android:textIsSelectable="false" />
 
@@ -42,7 +40,6 @@
         style="@style/CardStat2"
         android:layout_width="44dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/header_wins"
         android:textIsSelectable="false" />
@@ -52,7 +49,6 @@
         style="@style/CardStat2"
         android:layout_width="44dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/header_points"
         android:textIsSelectable="false" />
