@@ -10,6 +10,7 @@
     <dimen name="card_xs_text">14.0sp</dimen>
     <dimen name="card_xxs_text">12.0sp</dimen>
     <dimen name="card_xxxs_text">10.0sp</dimen>
+    <dimen name="card_xxxxs_text">9.0sp</dimen>
 
     <dimen name="card_outer_padding_firstlast">8dp</dimen>
     <dimen name="card_outer_padding_top">4dp</dimen>

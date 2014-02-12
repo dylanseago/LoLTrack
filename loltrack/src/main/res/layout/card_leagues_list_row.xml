@@ -4,20 +4,25 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingBottom="4dp"
-    android:paddingRight="4dp"
-    android:paddingTop="4dp" >
+    android:padding="4dp">
 
     <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/standing"
         style="@style/CardStat1.list.center"
-        android:layout_width="32dp"
+        android:layout_width="28dp"
+        android:text="@string/default_zero" />
+
+    <com.seago.loltrack.fonts.RobotoLightTextView
+        android:id="@+id/standingChange"
+        style="@style/CardStat1.list.center"
+        android:layout_width="28dp"
         android:text="@string/default_zero" />
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:paddingLeft="8dp"
+        android:layout_weight="1">
 
         <ImageView
             android:id="@+id/summonerIcon"
@@ -25,8 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:adjustViewBounds="true"
-            android:background="@drawable/champion_icon2"
-            android:contentDescription="@string/contentDescription_topRankingImage"
+            android:background="@drawable/summoner_icon"
+            android:contentDescription="@string/contentDescription_summonerIcon"
             android:maxHeight="24dp"
             android:maxWidth="24dp"
             android:scaleType="centerInside"
@@ -36,23 +41,23 @@
             android:id="@+id/summonerName"
             style="@style/CardStat1.list"
             android:layout_width="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/summonerIcon"
-            android:paddingLeft="8dp" />
+            android:paddingLeft="8dp"
+            android:layout_centerVertical="true"
+            android:text="@string/default_summoner"/>
     </RelativeLayout>
 
     <com.seago.loltrack.fonts.RobotoLightTextView
-        android:id="@+id/winPercent"
+        android:id="@+id/wins"
         style="@style/CardStat1.list.center"
         android:layout_width="48dp"
-        android:text="@string/default_zeroPercent"
+        android:text="@string/default_zero"
         android:textColor="@color/statGreen" />
 
     <com.seago.loltrack.fonts.RobotoLightTextView
-        android:id="@+id/games"
+        android:id="@+id/points"
         style="@style/CardStat1.list.center"
         android:layout_width="48dp"
         android:text="@string/default_zero"
         android:textColor="@color/statBlue" />
-
 </LinearLayout>

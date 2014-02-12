@@ -5,46 +5,31 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingBottom="4dp"
-    android:paddingLeft="4dp"
     android:paddingRight="4dp">
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/standing"
-        style="@style/CardStat"
+        style="@style/CardHeader2.list.center"
         android:layout_width="32dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/header_numberSign"
-        android:textIsSelectable="false" />
+        android:text="@string/header_numberSign" />
 
     <com.seago.loltrack.fonts.RobotoLightTextView
-        android:id="@+id/championName"
-        style="@style/CardHeader"
+        android:id="@+id/summonerName"
+        style="@style/CardHeader2.list"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/header_champion"
-        android:textIsSelectable="false" />
+        android:text="@string/header_champion" />
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/winPercent"
-        style="@style/CardStat2"
-        android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/header_winPercent"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="48dp"
+        android:text="@string/header_winPercent" />
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/games"
-        style="@style/CardStat2"
-        android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/header_games"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="48dp"
+        android:text="@string/header_games" />
 
 </LinearLayout>

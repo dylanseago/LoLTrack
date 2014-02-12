@@ -15,7 +15,7 @@ class CardChampionList extends CardBase {
 	private ArrayList<ChampionValueMap>	championValueMapSorted;
 
 	public CardChampionList(ArrayList<ChampionValueMap> championValueMap) {
-        super(R.layout.card_stats_list);
+        super(R.layout.card_list);
 		this.championValueMap = championValueMap;
 		this.championValueMapSorted = championValueMap;
 	}
@@ -35,9 +35,9 @@ class CardChampionList extends CardBase {
             else
                 trView.findViewById(R.id.standing).setVisibility(View.GONE);
 
-            ((ImageView) trView.findViewById(R.id.championIcon))
+            ((ImageView) trView.findViewById(R.id.summonerIcon))
                     .setImageResource(Utils.getDrawableResource("champion_icon_" + aChampionValueMapSorted.get("name")));
-            ((TextView) trView.findViewById(R.id.championName)).setText(aChampionValueMapSorted.get("name"));
+            ((TextView) trView.findViewById(R.id.summonerName)).setText(aChampionValueMapSorted.get("name"));
             ((TextView) trView.findViewById(R.id.winPercent)).setText(aChampionValueMapSorted.get("winPercent"));
             ((TextView) trView.findViewById(R.id.games)).setText(aChampionValueMapSorted.get("games"));
             tlView.addView(trView);

@@ -6,42 +6,6 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="CardRegion">
-        <item name="android:textSize">@dimen/card_xs_text</item>
-        <item name="android:textColor">@color/LightGrey</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="CardStat">
-        <item name="android:textSize">@dimen/card_xs_text</item>
-        <item name="android:textColor">@color/Grey</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-    </style>
-
-    <style name="CardStat2">
-        <item name="android:textSize">@dimen/card_xxs_text</item>
-        <item name="android:textColor">@color/Grey</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-    </style>
-
-    <style name="CardStat3">
-        <item name="android:textSize">@dimen/card_xxxs_text</item>
-        <item name="android:textColor">@color/Grey</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-    </style>
-    
-    <style name="CardStat4">
-        <item name="android:textSize">9.0sp</item>
-        <item name="android:textColor">@color/Grey</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-    </style>
-
     <style name="CardTitle">
         <item name="android:textSize">@dimen/card_xl_text</item>
         <item name="android:textColor">@color/Black</item>
@@ -57,19 +21,66 @@
         <item name="android:textColor">@color/DarkestGrey</item>
     </style>
 
-    <style name="CardHeader2" parent="@style/CardText">
+    <style name="CardHeader2" parent="@style/CardHeader">
         <item name="android:textSize">@dimen/card_small_text</item>
-        <item name="android:textColor">@color/DarkestGrey</item>
     </style>
 
-    <style name="CardHeader3" parent="@style/CardText">
+    <style name="CardHeader2.list">
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CardHeader2.list.center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CardHeader3" parent="@style/CardHeader">
         <item name="android:textSize">@dimen/card_xs_text</item>
-        <item name="android:textColor">@color/DarkestGrey</item>
+    </style>
+
+    <style name="CardHeader4" parent="@style/CardHeader">
+        <item name="android:textSize">@dimen/card_xxs_text</item>
+    </style>
+
+    <style name="CardStat">
+        <item name="android:textColor">@color/Grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CardStat1" parent="CardStat">
+        <item name="android:textSize">@dimen/card_xs_text</item>
+    </style>
+
+    <style name="CardStat1.list">
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="CardStat1.list.center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CardStat2" parent="CardStat">
+        <item name="android:textSize">@dimen/card_xxs_text</item>
+    </style>
+
+    <style name="CardStat3" parent="CardStat">
+        <item name="android:textSize">@dimen/card_xxxs_text</item>
     </style>
     
-    <style name="CardHeader4" parent="@style/CardText">
-        <item name="android:textSize">13.0sp</item>
-        <item name="android:textColor">@color/DarkestGrey</item>
+    <style name="CardStat4" parent="CardStat">
+        <item name="android:textSize">@dimen/card_xxxxs_text</item>
+    </style>
+
+    <style name="CardRegion">
+        <item name="android:textSize">@dimen/card_xs_text</item>
+        <item name="android:textColor">@color/LightGrey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="bannerSubtitle">
@@ -128,6 +139,18 @@
 
     <style name="card_content.double_padding">
         <item name="android:padding">@dimen/card_double_padding</item>
+    </style>
+
+    <style name="LeagueDivisionText">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/DarkGrey</item>
+        <item name="android:clickable">false</item>
+        <item name="android:selectable">false</item>
+    </style>
+
+    <style name="LeagueDivisionButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/Black</item>
     </style>
 
 

@@ -131,28 +131,28 @@ public class FragmentProfile extends Fragment {
 			// values for each view (images and text)
 			ArrayList<ResourceValueMap> viewValueMap = new ArrayList<ResourceValueMap>();
 
-			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.championName, "Jayce"));
-			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.championIcon, "champion_icon_jayce"));
+			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.summonerName, "Jayce"));
+			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.summonerIcon, "champion_icon_jayce"));
 			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.winPercent, "58%"));
 			viewValueMap.add(new ResourceValueMap(R.id.championOne, R.id.games, 60));
 
-			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.championName, "Singed"));
-			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.championIcon, "champion_icon_singed"));
+			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.summonerName, "Singed"));
+			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.summonerIcon, "champion_icon_singed"));
 			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.winPercent, "61%"));
 			viewValueMap.add(new ResourceValueMap(R.id.championTwo, R.id.games, 38));
 
-			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.championName, "Graves"));
-			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.championIcon, "champion_icon_graves"));
+			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.summonerName, "Graves"));
+			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.summonerIcon, "champion_icon_graves"));
 			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.winPercent, "56%"));
 			viewValueMap.add(new ResourceValueMap(R.id.championThree, R.id.games, 45));
 
-			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.championName, "Brand"));
-			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.championIcon, "champion_icon_brand"));
+			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.summonerName, "Brand"));
+			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.summonerIcon, "champion_icon_brand"));
 			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.winPercent, "63%"));
 			viewValueMap.add(new ResourceValueMap(R.id.championFour, R.id.games, 16));
 
-			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.championName, "Taric"));
-			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.championIcon, "champion_icon_taric"));
+			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.summonerName, "Taric"));
+			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.summonerIcon, "champion_icon_taric"));
 			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.winPercent, "55%"));
 			viewValueMap.add(new ResourceValueMap(R.id.championFive, R.id.games, 20));
 

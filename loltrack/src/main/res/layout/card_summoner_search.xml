@@ -42,7 +42,7 @@
 
             <TextView
                 android:id="@+id/summonerLevel"
-                style="@style/CardStat"
+                style="@style/CardStat1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/summonerName"
@@ -121,7 +121,7 @@
 
             <TextView
                 android:id="@+id/topRankingLP"
-                style="@style/CardStat"
+                style="@style/CardStat1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/topRanking"
@@ -140,7 +140,7 @@
 
                 <TextView
                     android:id="@+id/topRankingWinsLabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -149,7 +149,7 @@
 
                 <TextView
                     android:id="@+id/topRankingWins"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topRankingWinsLabel"
@@ -159,7 +159,7 @@
 
                 <TextView
                     android:id="@+id/topRankingLossesLabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topRankingWins"
@@ -168,7 +168,7 @@
 
                 <TextView
                     android:id="@+id/topRankingLosses"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topRankingLossesLabel"
@@ -188,7 +188,7 @@
 
                 <TextView
                     android:id="@+id/topRankingKDALabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -197,7 +197,7 @@
 
                 <TextView
                     android:id="@+id/topRankingKDA"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topRankingKDALabel"
@@ -260,7 +260,7 @@
 
                 <TextView
                     android:id="@+id/topChampionGamesLabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -269,7 +269,7 @@
 
                 <TextView
                     android:id="@+id/topChampionGames"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionGamesLabel"
@@ -290,7 +290,7 @@
 
                 <TextView
                     android:id="@+id/topChampionWinsLabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -299,7 +299,7 @@
 
                 <TextView
                     android:id="@+id/topChampionWins"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionWinsLabel"
@@ -309,7 +309,7 @@
 
                 <TextView
                     android:id="@+id/topChampionLossesLabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionWins"
@@ -318,7 +318,7 @@
 
                 <TextView
                     android:id="@+id/topChampionLosses"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionLossesLabel"
@@ -338,7 +338,7 @@
 
                 <TextView
                     android:id="@+id/topChampionKDALabel"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -347,7 +347,7 @@
 
                 <TextView
                     android:id="@+id/topChampionKDA"
-                    style="@style/CardStat"
+                    style="@style/CardStat1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/topChampionKDALabel"
@@ -379,7 +379,7 @@
 
         <TextView
             android:id="@+id/normalWinsLabel"
-            style="@style/CardStat"
+            style="@style/CardStat1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -388,7 +388,7 @@
 
         <TextView
             android:id="@+id/normalWins"
-            style="@style/CardStat"
+            style="@style/CardStat1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/normalWinsLabel"

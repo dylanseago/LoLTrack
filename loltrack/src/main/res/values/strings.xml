@@ -110,6 +110,10 @@
     <string name="default_gold">0k</string>
     <string name="default_region">REGION</string>
     <string name="header_points">Pts.</string>
+    <string name="default_leagueName">League Name</string>
+    <string name="default_leagueDivision">V</string>
+    <string name="button_divisionIncrease">+</string>
+    <string name="button_divisionDecrease">-</string>
 
     <string-array name="championRolesArray">
         <item name="all_roles">All Roles</item>
@@ -118,6 +122,14 @@
         <item name="mid">Mid</item>
         <item name="adc">AD Carry</item>
         <item name="support">Support</item>
+    </string-array>
+
+    <string-array name="default_leagueQueues">
+        <item name="solo_queue">Solo Queue</item>
+        <item name="5v5_team_name1">5v5 Team Name One</item>
+        <item name="5v5_team_name2">5v5 Team Name Two</item>
+        <item name="3v3_team_name1">3v3 Team Name One</item>
+        <item name="3v3_team_name2">3v3 Team Name Two</item>
     </string-array>
 
 </resources>

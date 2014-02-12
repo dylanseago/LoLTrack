@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_content"
-    style="@style/card_content.single_padding"
+    android:orientation="horizontal"
+    style="@style/card_content"
     android:padding="8dp">
 
     <ImageView
         android:id="@+id/leagueCrest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:adjustViewBounds="true"
         android:contentDescription="@string/contentDescription_leagueCrest"
-        android:maxHeight="100dp"
-        android:maxWidth="100dp"
+        android:maxHeight="88dp"
+        android:maxWidth="88dp"
+        android:layout_marginRight="4dp"
         android:scaleType="centerInside"
-        android:src="@drawable/crest_unranked" />
+        android:src="@drawable/crest_diamond_i" />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Spinner
+            android:id="@+id/queueSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:entries="@array/default_leagueQueues" />
+
+        <com.seago.loltrack.fonts.RobotoLightTextView
+            android:id="@+id/leagueName"
+            style="@style/CardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/queueSpinner"
+            android:gravity="center"
+            android:text="@string/default_leagueName" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -24,7 +24,7 @@
 
         <TextView
             android:id="@+id/winPercentLabel"
-            style="@style/CardStat"
+            style="@style/CardStat1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/gamesLabel"
-            style="@style/CardStat"
+            style="@style/CardStat1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -15,18 +15,18 @@ public class FragmentLeagues extends Fragment {
         super();
     }
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		// Inflate the layout for this fragment
-		View view = inflater.inflate(R.layout.fragment_leagues, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_leagues, container, false);
 
         CardAdapter cardAdapter = new CardAdapter(this.getActivity());
         cardAdapter.add(new CardGeneral(R.layout.card_leagues_header));
-        cardAdapter.add(new CardGeneral(R.layout.card_leagues_list_header));
+        cardAdapter.add(new CardLeagueList());
 
         CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);
         cardListView.setAdapter(cardAdapter);
 
         return view;
-	}
+    }
 }

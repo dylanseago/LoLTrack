@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/championRow"
+    android:id="@+id/entryRow"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="4dp"
@@ -14,7 +14,7 @@
         android:layout_weight="60" >
 
         <ImageView
-            android:id="@+id/championIcon"
+            android:id="@+id/summonerIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -27,12 +27,12 @@
             android:src="@drawable/icon_unknown" />
 
         <com.seago.loltrack.fonts.RobotoLightTextView
-            android:id="@+id/championName"
+            android:id="@+id/summonerName"
             style="@style/CardHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/championIcon"
+            android:layout_toRightOf="@+id/summonerIcon"
             android:paddingLeft="8dp"
             android:text="@string/default_championName"
             android:textIsSelectable="false" />

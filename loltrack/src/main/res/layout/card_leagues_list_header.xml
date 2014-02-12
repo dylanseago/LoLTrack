@@ -1,56 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_content"
-    style="@style/card_content.single_padding"
+    android:id="@+id/headerRow"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingBottom="4dp"
-    android:paddingLeft="4dp"
-    android:paddingRight="4dp">
+    android:paddingRight="4dp"
+    android:paddingLeft="4dp">
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/standing"
-        style="@style/CardStat"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/header_numberSign"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="28dp"
+        android:text="@string/header_numberSign"/>
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/standingChange"
-        style="@style/CardStat"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="%"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="28dp"
+        android:text="%" />
 
     <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/summonerName"
-        style="@style/CardStat"
+        style="@style/CardHeader2.list"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/header_summoner"
-        android:textIsSelectable="false" />
+        android:paddingLeft="8dp"
+        android:text="@string/header_summoner"/>
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/wins"
-        style="@style/CardStat2"
-        android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/header_wins"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="48dp"
+        android:text="@string/header_wins"/>
 
-    <com.seago.loltrack.fonts.RobotoTextView
+    <com.seago.loltrack.fonts.RobotoLightTextView
         android:id="@+id/points"
-        style="@style/CardStat2"
-        android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/header_points"
-        android:textIsSelectable="false" />
+        style="@style/CardHeader2.list.center"
+        android:layout_width="48dp"
+        android:text="@string/header_points" />
 
 </LinearLayout>
