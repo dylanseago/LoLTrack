@@ -11,13 +11,13 @@ import com.seago.loltrack.CardsUI.CardBase;
 import java.util.ArrayList;
 
 class CardChampionList extends CardBase {
-	private ArrayList<ChampionValueMap>	championValueMap;
-	private ArrayList<ChampionValueMap>	championValueMapSorted;
+	private ArrayList<MapChampionStats> mapChampionStats;
+	private ArrayList<MapChampionStats> mapChampionStatsSorted;
 
-	public CardChampionList(ArrayList<ChampionValueMap> championValueMap) {
+	public CardChampionList(ArrayList<MapChampionStats> mapChampionStats) {
         super(R.layout.card_list);
-		this.championValueMap = championValueMap;
-		this.championValueMapSorted = championValueMap;
+		this.mapChampionStats = mapChampionStats;
+		this.mapChampionStatsSorted = mapChampionStats;
 	}
 
 	@Override
@@ -27,19 +27,19 @@ class CardChampionList extends CardBase {
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
 		tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
 
-        for (ChampionValueMap aChampionValueMapSorted : championValueMapSorted) {
+        for (MapChampionStats aMapChampionStatsSorted : mapChampionStatsSorted) {
             LinearLayout trView = (LinearLayout) LayoutInflater.from(view.getContext()).inflate(R.layout.card_stats_list_row, null);
 
-            if (aChampionValueMapSorted.get("standing") != null)
-                ((TextView) trView.findViewById(R.id.standing)).setText(aChampionValueMapSorted.get("standing"));
+            if (aMapChampionStatsSorted.get("standing") != null)
+                ((TextView) trView.findViewById(R.id.standing)).setText(aMapChampionStatsSorted.get("standing"));
             else
                 trView.findViewById(R.id.standing).setVisibility(View.GONE);
 
             ((ImageView) trView.findViewById(R.id.summonerIcon))
-                    .setImageResource(Utils.getDrawableResource("champion_icon_" + aChampionValueMapSorted.get("name")));
-            ((TextView) trView.findViewById(R.id.summonerName)).setText(aChampionValueMapSorted.get("name"));
-            ((TextView) trView.findViewById(R.id.winPercent)).setText(aChampionValueMapSorted.get("winPercent"));
-            ((TextView) trView.findViewById(R.id.games)).setText(aChampionValueMapSorted.get("games"));
+                    .setImageResource(Utils.getDrawableResource("champion_icon_" + aMapChampionStatsSorted.get("name")));
+            ((TextView) trView.findViewById(R.id.summonerName)).setText(aMapChampionStatsSorted.get("name"));
+            ((TextView) trView.findViewById(R.id.winPercent)).setText(aMapChampionStatsSorted.get("winPercent"));
+            ((TextView) trView.findViewById(R.id.games)).setText(aMapChampionStatsSorted.get("games"));
             tlView.addView(trView);
             tlView.addView(LayoutInflater.from(view.getContext()).inflate(R.layout.divider_basic, null));
         }
@@ -47,11 +47,11 @@ class CardChampionList extends CardBase {
 	}
 
 	public void sortReset() {
-		this.championValueMapSorted = championValueMap;
+		this.mapChampionStatsSorted = mapChampionStats;
 	}
 
 	public void sortByRole(int roleId) {
         //TODO Implement
-        this.championValueMapSorted = championValueMap;
+        this.mapChampionStatsSorted = mapChampionStats;
 	}
 }

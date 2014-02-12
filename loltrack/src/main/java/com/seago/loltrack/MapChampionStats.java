@@ -2,10 +2,10 @@ package com.seago.loltrack;
 
 import java.util.HashMap;
 
-class ChampionValueMap extends HashMap<String, String> {
+class MapChampionStats extends HashMap<String, String> {
 	private static final long	serialVersionUID	= 1L;
 
-	public ChampionValueMap(Integer standing, String name, Double winPercent, Integer games) {
+	public MapChampionStats(Integer standing, String name, Double winPercent, Integer games) {
 		if (standing != null)
 			this.put("standing", Integer.toString(standing));
 		else

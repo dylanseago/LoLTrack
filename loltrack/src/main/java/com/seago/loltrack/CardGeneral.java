@@ -11,14 +11,14 @@ import java.util.ArrayList;
 
 class CardGeneral extends CardBase {
     private static final String DTAG = "CardGeneral";
-    private ArrayList<ResourceValueMap> viewValueMap;
+    private ArrayList<MapResourceValues> viewValueMap;
 
     public CardGeneral(int layoutId) {
         super(layoutId);
         Log.v(DTAG, "New CardGeneral with layoutId == " + layoutId);
     }
 
-    public CardGeneral(int layoutId, ArrayList<ResourceValueMap> viewValueMap) {
+    public CardGeneral(int layoutId, ArrayList<MapResourceValues> viewValueMap) {
         this(layoutId);
         this.viewValueMap = viewValueMap;
     }
@@ -27,7 +27,7 @@ class CardGeneral extends CardBase {
     public View getCardContent(View view) {
         // Sets all views to specified values
         if (viewValueMap != null) {
-            for (ResourceValueMap aViewValueMap : viewValueMap) {
+            for (MapResourceValues aViewValueMap : viewValueMap) {
                 View v;
                 // If the view is embedded in another layout, find that view
                 if (aViewValueMap.getLayoutId() != null) {

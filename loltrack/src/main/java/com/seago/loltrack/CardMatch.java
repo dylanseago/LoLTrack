@@ -6,7 +6,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 class CardMatch extends CardGeneral {
-	public CardMatch(ArrayList<ResourceValueMap> viewValueMap) {
+	public CardMatch(ArrayList<MapResourceValues> viewValueMap) {
 		super(R.layout.card_matches_game, viewValueMap);
 	}
 

@@ -9,7 +9,6 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
@@ -308,28 +307,6 @@ public class ActivitySearch extends ActivityBase {
             }
         }
 
-    }
-
-    public class CardOnClickListener implements OnClickListener {
-        Player player;
-
-        public CardOnClickListener(Player player) {
-            this.player = player;
-        }
-
-        @Override
-        public void onClick(View v) {
-            Data.player = player;
-            Intent intent = new Intent(v.getContext(), ActivityPlayer.class);
-            // Serializes the player object to be passed as a string
-			/*Log.v("CardOnClickListener", "Converting and Adding Json");
-			String s = new Gson().toJson(player).toString();
-			intent.putExtra("player", s);
-			Log.v("CardOnClickListener", "Part of StringExtra: " + s.substring(0, 256));
-			Log.v("CardOnClickListener", "Length of StringExtra: " + s.length());*/
-            Log.v("CardOnClickListener", "Starting activity");
-            v.getContext().startActivity(intent);
-        }
     }
 
     private class CardSearchClickListener implements CardListView.CardClickListener {

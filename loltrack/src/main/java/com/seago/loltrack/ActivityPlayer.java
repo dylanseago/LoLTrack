@@ -19,8 +19,8 @@ public class ActivityPlayer extends ActivityBase {
         // Sets up action bar
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        // Log.v(DTAG, "Setting title to: " + Data.player.getSummoner().getData().getName());
-        // actionBar.setTitle(Data.player.getSummoner().getData().getName());
+        // Log.v(DTAG, "Setting title to: " + Player.getSummoner().getData().getName());
+        // actionBar.setTitle(Player.getSummoner().getData().getName());
         actionBar.setTitle("Dyrus");
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 

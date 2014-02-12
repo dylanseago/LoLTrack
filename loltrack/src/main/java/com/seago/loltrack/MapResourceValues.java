@@ -1,18 +1,18 @@
 package com.seago.loltrack;
 
 
-class ResourceValueMap {
+class MapResourceValues {
     private Integer layoutId;
     private Integer resourceId;
     private String value;
 
-    public ResourceValueMap(Integer layoutId, Integer resourceId, String value) {
+    public MapResourceValues(Integer layoutId, Integer resourceId, String value) {
         this.setLayoutId(layoutId);
         this.setResourceId(resourceId);
         this.setValue(value);
     }
 
-    public ResourceValueMap(Integer layoutId, Integer resourceId, double value) {
+    public MapResourceValues(Integer layoutId, Integer resourceId, double value) {
         this.setLayoutId(layoutId);
         this.setResourceId(resourceId);
         if (resourceId == R.id.KDA) {
@@ -22,7 +22,7 @@ class ResourceValueMap {
         }
     }
 
-    public ResourceValueMap(Integer layoutId, Integer resourceId) {
+    public MapResourceValues(Integer layoutId, Integer resourceId) {
         this.setLayoutId(layoutId);
         this.setResourceId(resourceId);
         this.setValue(null);

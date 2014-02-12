@@ -9,13 +9,13 @@ import com.seago.loltrack.CardsUI.CardBase;
 import java.util.ArrayList;
 
 class CardLeagueList extends CardBase {
-	private ArrayList<ChampionValueMap>	championValueMap;
-	private ArrayList<ChampionValueMap>	championValueMapSorted;
+	private ArrayList<MapChampionStats> mapChampionStats;
+	private ArrayList<MapChampionStats> mapChampionStatsSorted;
 
 	public CardLeagueList() {
         super(R.layout.card_list);
-		//this.championValueMap = championValueMap;
-		//this.championValueMapSorted = championValueMap;
+		//this.mapChampionStats = mapChampionStats;
+		//this.mapChampionStatsSorted = mapChampionStats;
 	}
 
 	@Override
