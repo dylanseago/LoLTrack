@@ -7,55 +7,46 @@ import android.widget.TextView;
 
 import com.seago.loltrack.CardsUI.CardBase;
 
-import java.util.ArrayList;
-
 class CardGeneral extends CardBase {
     private static final String DTAG = "CardGeneral";
-    private ArrayList<MapResourceValues> viewValueMap;
+    private LayoutAdapter layoutAdapter;
 
     public CardGeneral(int layoutId) {
         super(layoutId);
         Log.v(DTAG, "New CardGeneral with layoutId == " + layoutId);
     }
 
-    public CardGeneral(int layoutId, ArrayList<MapResourceValues> viewValueMap) {
+    public CardGeneral(int layoutId, LayoutAdapter layoutAdapter) {
         this(layoutId);
-        this.viewValueMap = viewValueMap;
+        this.layoutAdapter = layoutAdapter;
     }
 
     @Override
     public View getCardContent(View view) {
         // Sets all views to specified values
-        if (viewValueMap != null) {
-            for (MapResourceValues aViewValueMap : viewValueMap) {
-                View v;
-                // If the view is embedded in another layout, find that view
-                if (aViewValueMap.getLayoutId() != null) {
-                    v = view.findViewById(aViewValueMap.getLayoutId());
-                } else {
-                    v = view;
-                }
+        if (layoutAdapter != null) {
+            for (int i = 0; i < layoutAdapter.getViewCount() - 1; i++) {
+                View v = layoutAdapter.getView(view, i);
 
+                String value;
                 // If the view isnt null (visible)
-                if (aViewValueMap.getValue() != null) {
-                    // Temp object used for comparing its type
-                    View temp = v.findViewById(aViewValueMap.getResourceId());
+                if ((value = layoutAdapter.getViewValue(i)) != null) {
                     // If its a textView
-                    if (temp instanceof TextView) {
-                        ((TextView) temp).setText(aViewValueMap.getValue());
+                    if (v instanceof TextView) {
+                        ((TextView) v).setText(value);
                     }
                     // If its an imageView
-                    else if (temp instanceof ImageView) {
+                    else if (v instanceof ImageView) {
                         try {
-                            ((ImageView) temp).setImageResource(Utils.getDrawableResource(aViewValueMap.getValue()));
+                            ((ImageView) v).setImageResource(Utils.getDrawableResource(value));
                         } catch (Exception e) {
-                            temp.setVisibility(View.INVISIBLE);
+                            v.setVisibility(View.INVISIBLE);
                         }
                     }
                 }
-                // If the view is null (gone)
+                // If the view's value is null (gone)
                 else {
-                    v.findViewById(aViewValueMap.getResourceId()).setVisibility(View.GONE);
+                    v.setVisibility(View.GONE);
                 }
             }
         }

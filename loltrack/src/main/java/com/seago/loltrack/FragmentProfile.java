@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import com.seago.loltrack.CardsUI.CardAdapter;
 import com.seago.loltrack.CardsUI.CardListView;
 
-import java.util.ArrayList;
-
 public class FragmentProfile extends Fragment {
 
     public FragmentProfile() {
@@ -26,139 +24,136 @@ public class FragmentProfile extends Fragment {
 
 		// Sets the values for the header card
 		{
-			// layout
-			int layoutId = R.layout.card_profile_header;
-
 			// values for each view (images and text)
-			ArrayList<MapResourceValues> viewValueMap = new ArrayList<MapResourceValues>();
+			LayoutAdapter layoutAdapter = new LayoutAdapter();
+			layoutAdapter.add(R.id.summonerIcon, "profile_icon534");
+            layoutAdapter.add(R.id.summonerName, "Dyrus");
+            layoutAdapter.add(R.id.summonerLevel, 30);
 
-			// String summonerIcon = "profile_icon" + Player.getSummoner().getData().getProfileIconId();
-			String summonerIcon = "profile_icon534";
-			viewValueMap.add(new MapResourceValues(null, R.id.summonerIcon, summonerIcon));
-
-			// String summonerName = Player.getSummoner().getData().getName();
-			String summonerName = "Dyrus";
-			viewValueMap.add(new MapResourceValues(null, R.id.summonerName, summonerName));
-
-			// String summonerLevel = Player.getRegion() + " - Level " + Player.getSummoner().getData().getSummonerLevel().intValue();
-			String summonerLevel = "30";
-			viewValueMap.add(new MapResourceValues(null, R.id.summonerLevel, summonerLevel));
-
-			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardAdapter.add(card);
+			cardAdapter.add(new CardGeneral(R.layout.card_profile_header, layoutAdapter));
 		}
 
 		// Sets the values for the ranked stats card
 		{
-			int layoutId = R.layout.card_profile_ranked_stats;
-
 			// values for each view (images and text)
-			ArrayList<MapResourceValues> viewValueMap = new ArrayList<MapResourceValues>();
+            LayoutAdapter rankedSoloAdapter = new LayoutAdapter();
+            rankedSoloAdapter.add(R.id.queue, "Solo");
+            rankedSoloAdapter.add(R.id.crest, "crest_diamond_i");
+            rankedSoloAdapter.add(R.id.league, "Diamond I");
+            rankedSoloAdapter.add(R.id.lp, "55 LP");
+            rankedSoloAdapter.add(R.id.wins, 119);
+            rankedSoloAdapter.add(R.id.losses, 88);
+            rankedSoloAdapter.add(R.id.KDA, 3.14);
+            rankedSoloAdapter.add(R.id.lastPlayedLabel);
+            rankedSoloAdapter.add(R.id.lastPlayed);
 
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.queue, "3v3"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.crest, "crest_unranked"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.league, "Unranked"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.lp));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.winsLabel));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.wins));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.lossesLabel));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.losses));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.KDALabel));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.KDA));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.lastPlayedLabel));
-			viewValueMap.add(new MapResourceValues(R.id.ranked3v3, R.id.lastPlayed));
 
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.queue, "Solo"));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.crest, "crest_diamond_i"));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.league, "Diamond I"));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.lp, "55 LP"));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.wins, 119));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.losses, 88));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.KDA, 3.14));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.lastPlayedLabel));
-			viewValueMap.add(new MapResourceValues(R.id.rankedSolo, R.id.lastPlayed));
+            LayoutAdapter ranked3v3Adapter = new LayoutAdapter();
+            ranked3v3Adapter.add(R.id.queue, "3v3");
+            ranked3v3Adapter.add(R.id.crest, "crest_unranked");
+            ranked3v3Adapter.add(R.id.league, "Unranked");
+            ranked3v3Adapter.add(R.id.lp);
+            ranked3v3Adapter.add(R.id.winsLabel);
+            ranked3v3Adapter.add(R.id.wins);
+            ranked3v3Adapter.add(R.id.lossesLabel);
+            ranked3v3Adapter.add(R.id.losses);
+            ranked3v3Adapter.add(R.id.KDALabel);
+            ranked3v3Adapter.add(R.id.KDA);
+            ranked3v3Adapter.add(R.id.lastPlayedLabel);
+            ranked3v3Adapter.add(R.id.lastPlayed);
 
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.queue, "5v5"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.crest, "crest_gold_v"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.league, "Gold V"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.lp, "19 LP"));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.wins, 12));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.losses, 8));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.KDA, 2.55));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.lastPlayedLabel));
-			viewValueMap.add(new MapResourceValues(R.id.ranked5v5, R.id.lastPlayed));
+            LayoutAdapter ranked5v5Adapter = new LayoutAdapter();
+			ranked5v5Adapter.add(R.id.queue, "5v5");
+			ranked5v5Adapter.add(R.id.crest, "crest_gold_v");
+			ranked5v5Adapter.add(R.id.league, "Gold V");
+			ranked5v5Adapter.add(R.id.lp, "19 LP");
+			ranked5v5Adapter.add(R.id.wins, 12);
+			ranked5v5Adapter.add(R.id.losses, 8);
+			ranked5v5Adapter.add(R.id.KDA, 2.55);
+			ranked5v5Adapter.add(R.id.lastPlayedLabel);
+			ranked5v5Adapter.add(R.id.lastPlayed);
 
-			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardAdapter.add(card);
+            LayoutAdapter layoutAdapter = new LayoutAdapter();
+            layoutAdapter.add(R.id.ranked3v3, ranked3v3Adapter);
+            layoutAdapter.add(R.id.rankedSolo, rankedSoloAdapter);
+            layoutAdapter.add(R.id.ranked5v5, ranked5v5Adapter);
 
+			cardAdapter.add(new CardGeneral(R.layout.card_profile_ranked_stats, layoutAdapter));
 		}
 
 		// Sets the values for the normal stats card
 		{
-			int layoutId = R.layout.card_profile_normal_stats;
-
 			// values for each view (images and text)
-			ArrayList<MapResourceValues> viewValueMap = new ArrayList<MapResourceValues>();
+			LayoutAdapter TTAdapter = new LayoutAdapter();
+            TTAdapter.add(R.id.map, "3v3");
+            TTAdapter.add(R.id.crest, "crest_bronze_v");
+            TTAdapter.add(R.id.wins, 0);
+            TTAdapter.add(R.id.kills, 11);
+            TTAdapter.add(R.id.lastPlayed, "2 months ago");
 
-			viewValueMap.add(new MapResourceValues(R.id.twistedTreeline, R.id.map, "3v3"));
-			viewValueMap.add(new MapResourceValues(R.id.twistedTreeline, R.id.crest, "crest_bronze_v"));
-			viewValueMap.add(new MapResourceValues(R.id.twistedTreeline, R.id.wins, 0));
-			viewValueMap.add(new MapResourceValues(R.id.twistedTreeline, R.id.kills, 11));
-			viewValueMap.add(new MapResourceValues(R.id.twistedTreeline, R.id.lastPlayed, "2 months ago"));
+            LayoutAdapter SRAdapter = new LayoutAdapter();
+            SRAdapter.add(R.id.map, "Classic");
+            SRAdapter.add(R.id.crest, "crest_challenger");
+            SRAdapter.add(R.id.wins, 1366);
+            SRAdapter.add(R.id.kills, 15464);
+            SRAdapter.add(R.id.lastPlayed, "1 hour ago");
 
-			viewValueMap.add(new MapResourceValues(R.id.summonersRift, R.id.map, "Classic"));
-			viewValueMap.add(new MapResourceValues(R.id.summonersRift, R.id.crest, "crest_challenger"));
-			viewValueMap.add(new MapResourceValues(R.id.summonersRift, R.id.wins, 1366));
-			viewValueMap.add(new MapResourceValues(R.id.summonersRift, R.id.kills, 15464));
-			viewValueMap.add(new MapResourceValues(R.id.summonersRift, R.id.lastPlayed, "1 hour ago"));
+            LayoutAdapter CSAdapter = new LayoutAdapter();
+            CSAdapter.add(R.id.map, "Dominion");
+            CSAdapter.add(R.id.crest, "crest_bronze_v");
+            CSAdapter.add(R.id.wins, 40);
+            CSAdapter.add(R.id.killsLabel, "Max Score: ");
+            CSAdapter.add(R.id.kills, 2190);
+            CSAdapter.add(R.id.lastPlayed, "1 month ago");
 
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.map, "Dominion"));
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.crest, "crest_bronze_v"));
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.wins, 40));
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.killsLabel, "Max Score: "));
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.kills, 2190));
-			viewValueMap.add(new MapResourceValues(R.id.crystalScar, R.id.lastPlayed, "1 month ago"));
+            LayoutAdapter layoutAdapter = new LayoutAdapter();
+            layoutAdapter.add(R.id.twistedTreeline, TTAdapter);
+            layoutAdapter.add(R.id.summonersRift, SRAdapter);
+            layoutAdapter.add(R.id.crystalScar, CSAdapter);
 
-			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardAdapter.add(card);
-
+			cardAdapter.add(new CardGeneral(R.layout.card_profile_normal_stats, layoutAdapter));
 		}
 
 		// Sets the values for the champion stats card
 		{
-			int layoutId = R.layout.card_profile_champion_stats;
-
 			// values for each view (images and text)
-			ArrayList<MapResourceValues> viewValueMap = new ArrayList<MapResourceValues>();
+			LayoutAdapter[] cAdapter = new LayoutAdapter[5];
+            for (int i = 0; i < cAdapter.length; i++)
+                cAdapter[i] = new LayoutAdapter();
 
-			viewValueMap.add(new MapResourceValues(R.id.championOne, R.id.summonerName, "Jayce"));
-			viewValueMap.add(new MapResourceValues(R.id.championOne, R.id.summonerIcon, "champion_icon_jayce"));
-			viewValueMap.add(new MapResourceValues(R.id.championOne, R.id.winPercent, "58%"));
-			viewValueMap.add(new MapResourceValues(R.id.championOne, R.id.games, 60));
+			cAdapter[0].add(R.id.summonerName, "Jayce");
+			cAdapter[0].add(R.id.summonerIcon, "champion_icon_jayce");
+			cAdapter[0].add(R.id.winPercent, "58%");
+			cAdapter[0].add(R.id.games, 60);
 
-			viewValueMap.add(new MapResourceValues(R.id.championTwo, R.id.summonerName, "Singed"));
-			viewValueMap.add(new MapResourceValues(R.id.championTwo, R.id.summonerIcon, "champion_icon_singed"));
-			viewValueMap.add(new MapResourceValues(R.id.championTwo, R.id.winPercent, "61%"));
-			viewValueMap.add(new MapResourceValues(R.id.championTwo, R.id.games, 38));
+			cAdapter[1].add(R.id.summonerName, "Singed");
+			cAdapter[1].add(R.id.summonerIcon, "champion_icon_singed");
+			cAdapter[1].add(R.id.winPercent, "61%");
+			cAdapter[1].add(R.id.games, 38);
 
-			viewValueMap.add(new MapResourceValues(R.id.championThree, R.id.summonerName, "Graves"));
-			viewValueMap.add(new MapResourceValues(R.id.championThree, R.id.summonerIcon, "champion_icon_graves"));
-			viewValueMap.add(new MapResourceValues(R.id.championThree, R.id.winPercent, "56%"));
-			viewValueMap.add(new MapResourceValues(R.id.championThree, R.id.games, 45));
+			cAdapter[2].add(R.id.summonerName, "Graves");
+			cAdapter[2].add(R.id.summonerIcon, "champion_icon_graves");
+			cAdapter[2].add(R.id.winPercent, "56%");
+			cAdapter[2].add(R.id.games, 45);
 
-			viewValueMap.add(new MapResourceValues(R.id.championFour, R.id.summonerName, "Brand"));
-			viewValueMap.add(new MapResourceValues(R.id.championFour, R.id.summonerIcon, "champion_icon_brand"));
-			viewValueMap.add(new MapResourceValues(R.id.championFour, R.id.winPercent, "63%"));
-			viewValueMap.add(new MapResourceValues(R.id.championFour, R.id.games, 16));
+			cAdapter[3].add(R.id.summonerName, "Brand");
+			cAdapter[3].add(R.id.summonerIcon, "champion_icon_brand");
+			cAdapter[3].add(R.id.winPercent, "63%");
+			cAdapter[3].add(R.id.games, 16);
 
-			viewValueMap.add(new MapResourceValues(R.id.championFive, R.id.summonerName, "Taric"));
-			viewValueMap.add(new MapResourceValues(R.id.championFive, R.id.summonerIcon, "champion_icon_taric"));
-			viewValueMap.add(new MapResourceValues(R.id.championFive, R.id.winPercent, "55%"));
-			viewValueMap.add(new MapResourceValues(R.id.championFive, R.id.games, 20));
+			cAdapter[4].add(R.id.summonerName, "Taric");
+			cAdapter[4].add(R.id.summonerIcon, "champion_icon_taric");
+			cAdapter[4].add(R.id.winPercent, "55%");
+			cAdapter[4].add(R.id.games, 20);
 
-			CardGeneral card = new CardGeneral(layoutId, viewValueMap);
-			cardAdapter.add(card);
+            LayoutAdapter layoutAdapter = new LayoutAdapter();
+            layoutAdapter.add(R.id.championOne, cAdapter[0]);
+            layoutAdapter.add(R.id.championTwo, cAdapter[1]);
+            layoutAdapter.add(R.id.championThree, cAdapter[2]);
+            layoutAdapter.add(R.id.championFour, cAdapter[3]);
+            layoutAdapter.add(R.id.championFive, cAdapter[4]);
 
+			cardAdapter.add(new CardGeneral(R.layout.card_profile_champion_stats, layoutAdapter));
 		}
 
         CardListView cardListView = (CardListView) view.findViewById(R.id.cardListView);

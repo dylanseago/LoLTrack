@@ -3,11 +3,9 @@ package com.seago.loltrack;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 class CardMatch extends CardGeneral {
-	public CardMatch(ArrayList<MapResourceValues> viewValueMap) {
-		super(R.layout.card_matches_game, viewValueMap);
+	public CardMatch(LayoutAdapter layoutAdapter) {
+		super(R.layout.card_matches_game, layoutAdapter);
 	}
 
 	@Override
