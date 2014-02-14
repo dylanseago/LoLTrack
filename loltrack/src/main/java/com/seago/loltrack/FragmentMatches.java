@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import com.seago.loltrack.CardsUI.CardAdapter;
 import com.seago.loltrack.CardsUI.CardListView;
 
-import java.util.ArrayList;
-
 public class FragmentMatches extends Fragment {
 
     public FragmentMatches() {
